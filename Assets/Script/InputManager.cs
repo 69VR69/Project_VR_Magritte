@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
 using Unity.Mathematics;
@@ -15,6 +13,13 @@ public class InputManager : MonoBehaviour
 
     private InputDevice _controller;
     private bool _isControllerConnected = false;
+    public static InputManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     private void Update()
     {

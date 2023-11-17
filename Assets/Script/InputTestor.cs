@@ -14,6 +14,8 @@ public class InputTestor : MonoBehaviour
     [SerializeField]
     private InputManager _inputManager;
 
+    private void Awake() => _inputManager = InputManager.Instance;
+
     private void Update()
     {
         _TriggerCube.SetActive(_inputManager.IsTrigger);
