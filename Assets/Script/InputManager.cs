@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 
 using Unity.Mathematics;
@@ -7,9 +9,10 @@ using UnityEngine.XR;
 
 public class InputManager : MonoBehaviour
 {
-    public bool IsTrigger { get; set; }
-    public bool IsBackButton { get; set; }
-    public float2 TouchPad { get; set; }
+    public bool IsTrigger { get; set; } = false;
+    public float TriggerValue { get; set; } = 0f;
+    public bool IsBackButton { get; set; } = false;
+    public float2 TouchPad { get; set; } = float2.zero;
 
     private InputDevice _controller;
     private bool _isControllerConnected = false;
@@ -21,10 +24,66 @@ public class InputManager : MonoBehaviour
             Instance = this;
     }
 
+    float value = 0f;
+    Coroutine coroutine = null;
+
     private void Update()
     {
         GetPicoDevice();
         GetPicoInputs();
+
+        // Mocked inputs for testing in the editor
+        if (Application.isEditor)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                IsTrigger = true;
+                Debug.Log("[M]: Trigger pressed");
+            }
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                IsTrigger = false;
+                Debug.Log("[M]: Trigger released");
+            }
+
+            coroutine ??= StartCoroutine(TriggerValueCoroutine());
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                IsBackButton = true;
+                Debug.Log("[M]: Back button pressed");
+            }
+            else if (Input.GetKeyUp(KeyCode.B))
+            {
+                IsBackButton = false;
+                Debug.Log("[M]: Back button released");
+            }
+
+            TouchPad = new float2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
+    }
+
+    private IEnumerator TriggerValueCoroutine()
+    {
+        while (true)
+        {
+            Debug.Log("PUTE: " + TriggerValue);
+            if (IsTrigger)
+            {
+                value += 0.1f;
+                if (value > 1f)
+                    value = 1f;
+            }
+            else
+            {
+                value -= 0.1f;
+                if (value < 0f)
+                    value = 0f;
+            }
+
+            TriggerValue = value;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
     private void GetPicoDevice()
@@ -47,9 +106,14 @@ public class InputManager : MonoBehaviour
     {
         if (_isControllerConnected)
         {
-            if (_controller.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerValue))
+            if (_controller.TryGetFeatureValue(CommonUsages.triggerButton, out bool isTrigger))
             {
-                IsTrigger = triggerValue;
+                IsTrigger = isTrigger;
+            }
+
+            if (_controller.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+            {
+                TriggerValue = triggerValue;
             }
 
             if (_controller.TryGetFeatureValue(CommonUsages.menuButton, out bool backButtonValue))
