@@ -67,7 +67,6 @@ public class InputManager : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("PUTE: " + TriggerValue);
             if (IsTrigger)
             {
                 value += 0.1f;
