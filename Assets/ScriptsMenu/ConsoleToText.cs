@@ -1,19 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
+using UnityEngine.Profiling;
 
 public class ConsoleToText : MonoBehaviour
 {
-    public int maxDisplayLines = 10; // Nombre maximal de lignes affich�es
-    private List<string> allLogs = new List<string>(); // Liste de tous les messages d'erreur
-    private List<string> displayedLogs = new List<string>(); // Liste des messages � afficher
+    public int maxDisplayLines = 10;
+    private List<string> allLogs = new List<string>();
+    private List<string> displayedLogs = new List<string>();
     public Text display;
 
-    private void Update()
+    private void Start()
     {
-        Debug.LogError("message d'erreur"); // Exemple de message d'erreur
+        // Exemple de message d'erreur
+        AddLog("Le jeu a démarré");
     }
 
     private void OnEnable()
@@ -24,6 +26,16 @@ public class ConsoleToText : MonoBehaviour
     private void OnDisable()
     {
         Application.logMessageReceived -= HandleLog;
+    }
+
+    //Personalised message in the console
+    public void AddLog(string message)
+    {
+        string currentTime = DateTime.Now.ToString("HH:mm:ss");
+        string formattedLog = $"<color=green><{currentTime}></color> {message}";
+
+        allLogs.Add(formattedLog);
+        UpdateDisplayedLogs();
     }
 
     void HandleLog(string logString, string stackTrace, LogType type)
