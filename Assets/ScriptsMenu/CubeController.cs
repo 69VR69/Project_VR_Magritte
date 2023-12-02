@@ -24,4 +24,9 @@ public class CubeController : MonoBehaviour
             hasTouchedGround = true;  // Marquez que le message a été affiché
         }
     }
+    private void OnMouseDown()
+    {
+        // Ajoutez un message à la console lorsque vous cliquez sur le cube
+        consoleToText.AddLog("Le cube a été cliqué");
+    }
 }
