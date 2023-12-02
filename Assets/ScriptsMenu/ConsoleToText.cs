@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
 public class ConsoleToText : MonoBehaviour
 {
-    public int maxDisplayLines = 10; // Nombre maximal de lignes affichées
+    public int maxDisplayLines = 10; // Nombre maximal de lignes affichï¿½es
     private List<string> allLogs = new List<string>(); // Liste de tous les messages d'erreur
-    private List<string> displayedLogs = new List<string>(); // Liste des messages à afficher
+    private List<string> displayedLogs = new List<string>(); // Liste des messages ï¿½ afficher
     public Text display;
 
     private void Update()
@@ -29,7 +30,9 @@ public class ConsoleToText : MonoBehaviour
     {
         if (type == LogType.Error)
         {
-            string formattedLog = string.Format("<color=red>{0}</color> {1}", Time.time, logString);
+            string currentTime = DateTime.Now.ToString("HH:mm:ss");
+            string formattedLog = $"<color=red><{currentTime}></color> {logString}";
+
             allLogs.Add(formattedLog);
             UpdateDisplayedLogs();
         }
