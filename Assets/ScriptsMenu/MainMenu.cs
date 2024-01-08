@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
         
     }*/
     public string levelToLoad;
+    public GameObject settingsWindow;
 
     public void StartGame()
     {
@@ -19,13 +20,47 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsButton()
     {
+        ShowSettingsWindow();
 
     }
+
+    public void QuitSettingsButton()
+    {
+        CloseSettingsWindow();
+
+    }
+
 
     public void QuitGame()
     {
         Application.Quit();
 
+    }
+
+    private void ShowSettingsWindow()
+    {
+        if (settingsWindow != null)
+        {
+            settingsWindow.SetActive(true);
+            Debug.Log("SettingsWindow shown");
+        }
+        else
+        {
+            Debug.LogError("SettingsWindow not assigned!");
+        }
+    }
+
+    private void CloseSettingsWindow()
+    {
+        if (settingsWindow != null)
+        {
+            settingsWindow.SetActive(false);
+            Debug.Log("SettingsWindow shown");
+        }
+        else
+        {
+            Debug.LogError("SettingsWindow not assigned!");
+        }
     }
 
 

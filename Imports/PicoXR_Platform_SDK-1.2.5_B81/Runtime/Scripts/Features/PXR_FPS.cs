@@ -17,22 +17,11 @@ namespace Unity.XR.PXR
         private float accum = 0.0f;
         private int frames = 0;
         private float timeLeft = 0.0f;
-        private string strFps = null;
+        private string strFps = string.Empty;
 
-        void Awake()
-        {
-            fpsText = GetComponent<Text>();
-        }
+        
 
-        void Update()
-        {
-            if (fpsText != null)
-            {
-                ShowFps();
-            }
-        }
-
-        private void ShowFps()
+        public string ShowFps()
         {
             timeLeft -= Time.unscaledDeltaTime;
             accum += Time.unscaledDeltaTime;
@@ -41,11 +30,12 @@ namespace Unity.XR.PXR
             {
                 PXR_Plugin.System.UPxr_GetIntConfig((int)GlobalIntConfigs.RenderFPS, ref frames);
                 strFps = string.Format("FPS: {0:f0}", frames);
-                fpsText.text = strFps;
 
                 timeLeft += updateInterval;
                 accum = 0.0f;
+              
             }
+            return strFps;
         }
     }
 }
