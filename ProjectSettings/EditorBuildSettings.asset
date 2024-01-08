@@ -6,8 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Debug/MirrorScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+=======
+    path: Assets/Scenes/Blueprint.unity
+    guid: 8de682a74996a7c47bdd9f6e95130ce5
+>>>>>>> main
   m_configObjects:
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 33a1f6cea236e4546944432993955f00, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ab1de2978a5c1da42875d2d41f3bf8db, type: 2}

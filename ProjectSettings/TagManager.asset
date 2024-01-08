@@ -4,9 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ground
   - InitPosition
   - InitPositionMenu
+=======
+  - Interactable
+  - InitPosition
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
