@@ -15,7 +15,7 @@ public class ConsoleToText : MonoBehaviour
     private void Start()
     {
         // Exemple de message d'erreur
-        AddLog("Le jeu a démarré");
+        AddLog("Affichage de la console");
     }
 
     private void OnEnable()
