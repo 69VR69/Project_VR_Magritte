@@ -789,15 +789,12 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-<<<<<<< HEAD
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: f4932204-1bb4-47c8-a60c-b39c9fe6d190
-=======
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
->>>>>>> main
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Project_VR_Magritte
