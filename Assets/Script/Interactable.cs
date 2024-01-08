@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-[RequireComponent(typeof(BoxCollider),typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
@@ -11,6 +9,8 @@ public class Interactable : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private BoxCollider _collider;
+
+    private bool _isGrabbed = false;
 
     private void Awake()
     {
@@ -30,15 +30,38 @@ public class Interactable : MonoBehaviour
         _rigidbody.useGravity = false;
         _collider.isTrigger = true;
 
-        if (_isGrabbable)
-        { 
-            // add component XRGrabInteractable
-            gameObject.AddComponent<XRGrabInteractable>();
-        }
+        //if (_isGrabbable)
+        //{
+        //    // add component XRGrabInteractable
+        //    gameObject.AddComponent<XRGrabInteractable>();
+        //}
     }
 
-    public void Run()
+    public void Run(GameObject sender, InputManager inputManager)
     {
         Debug.Log("Interactable is running");
+
+        if (_isGrabbable)
+        {
+            if (inputManager.IsTrigger)
+            {
+                if (_isGrabbed)
+                {
+                    GetComponent<Renderer>().material.color = Color.yellow;
+                    _rigidbody.useGravity = false;
+                    _collider.isTrigger = true;
+                    transform.SetParent(null);
+                    _isGrabbed = false;
+                }
+                else
+                {
+                    GetComponent<Renderer>().material.color = Color.red;
+                    _rigidbody.useGravity = false;
+                    _collider.isTrigger = true;
+                    transform.SetParent(sender.transform);
+                    _isGrabbed = true;
+                }
+            }
+        }
     }
 }

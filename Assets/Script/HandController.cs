@@ -50,7 +50,7 @@ public class HandController : MonoBehaviour
 
             if (interactable != null)
             {
-                interactable.Run();
+                interactable.Run(gameObject, _inputManager);
             }
         }
     }
