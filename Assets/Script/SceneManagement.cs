@@ -15,11 +15,11 @@ namespace Assets.Script
         private GameObject _player;
 
         [SerializeField]
-        private List<int> _scenes = new List<int>();
+        private List<string> _scenes = new List<string>();
 
-        private int _currentSceneIndex = 0;
+        private string _currentScene = string.Empty;
         private Dictionary<Scene, GameObject> _loadedScenes = new Dictionary<Scene, GameObject>();
-        private Dictionary<int, Coroutine> _loadingScenes = new Dictionary<int, Coroutine>();
+        private Dictionary<string, Coroutine> _loadingScenes = new Dictionary<string, Coroutine>();
 
         private void Awake()
         {
@@ -41,40 +41,40 @@ namespace Assets.Script
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                ChangeSceneTo(1);
+                ChangeSceneTo("startroom");
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                ChangeSceneTo(2);
+                ChangeSceneTo("bedroom");
             }
         }
 
-        public void ChangeSceneTo(int sceneId)
+        public void ChangeSceneTo(string sceneName)
         {
-            if (_scenes.Contains(sceneId))
+            if (_scenes.Contains(sceneName))
             {
-                ActivateScene(sceneId);
+                ActivateScene(sceneName);
             }
             else
             {
-                Debug.LogError($"Scene {sceneId} not found");
+                Debug.LogError($"Scene \"{sceneName}\" not found");
             }
         }
 
-        private void ActivateScene(int sceneId)
+        private void ActivateScene(string sceneName)
         {
             if (_loadedScenes.Count <= 0)
                 return;
 
             // Get The loaded scene
-            var scene = _loadedScenes.FirstOrDefault((scene) => scene.Key.buildIndex == sceneId);
+            var scene = _loadedScenes.FirstOrDefault((scene) => scene.Key.name.ToLowerInvariant() == sceneName.ToLowerInvariant());
             Scene sceneToActivate = scene.Key;
             GameObject sceneMainGameObject = scene.Value;
 
             if (sceneToActivate == null || sceneMainGameObject == null)
             {
-                Debug.LogError($"Scene {sceneId} or his gameObject not found to be activated, try again later");
+                Debug.LogWarning($"Scene {sceneName} or his gameObject not found to be activated, try again later");
                 return;
             }
 
@@ -90,18 +90,18 @@ namespace Assets.Script
 
             Debug.Log($"Scene {sceneToActivate.name} activated");
 
-            int previousSceneId = _currentSceneIndex;
+            string previousSceneName = _currentScene;
 
             // Set the current scene index
-            _currentSceneIndex = sceneToActivate.buildIndex;
+            _currentScene = sceneName;
 
             // Teleport the player to the spawn point in the sceneMainGameObject
             GameObject tpPoint = sceneMainGameObject.transform.Find(_tagTpPoint).gameObject;
             _player.transform.position = tpPoint.transform.position;
 
             // Deactivate the scene previous scene
-            if (previousSceneId > 0)
-                DeactivateScene(previousSceneId);
+            if (!string.IsNullOrWhiteSpace(previousSceneName))
+                DeactivateScene(previousSceneName);
 
             // Unload the oldest scene if there is more than 2 scenes loaded
             if (_loadedScenes.Count > 2)
@@ -113,51 +113,52 @@ namespace Assets.Script
                 SceneManager.UnloadSceneAsync(sceneToUnload);
             }
 
-            // Prepare the following scene if exist
-            int nextScene = _scenes.Where(s => s == _currentSceneIndex + 1)?.FirstOrDefault() ?? -1;
-            if (nextScene > 0)
+            // Prepare the following scene in scene list
+            int currentSceneIndex = _scenes.IndexOf(sceneName);
+            string nextScene = _scenes.ElementAtOrDefault(currentSceneIndex + 1);
+            if (!string.IsNullOrWhiteSpace(nextScene))
                 PrepareScene(nextScene);
         }
 
-        private void DeactivateScene(int sceneId)
+        private void DeactivateScene(string sceneName)
         {
             if (_loadedScenes.Count <= 0)
                 return;
 
             // Get the previous scene
-            var scene = _loadedScenes.FirstOrDefault((scene) => scene.Key.buildIndex == sceneId);
+            var scene = _loadedScenes.FirstOrDefault((scene) => scene.Key.name.ToLowerInvariant() == sceneName.ToLowerInvariant());
             Scene previousScene = scene.Key;
             GameObject sceneMainGameObject = scene.Value;
 
             if (previousScene == null || sceneMainGameObject == null)
             {
-                Debug.LogError($"Scene {sceneId} or his gameObject not found to be deactivated");
+                Debug.LogWarning($"Scene \"{sceneName}\" or his gameObject not found to be deactivated");
                 return;
             }
 
             // Get the scene main gameObject
             sceneMainGameObject.SetActive(false);
 
-            Debug.Log($"Scene {previousScene.name} deactivated");
+            Debug.Log($"Scene \"{previousScene.name}\" deactivated");
         }
 
-        private void PrepareScene(int sceneId)
+        private void PrepareScene(string sceneName)
         {
-            if (_loadingScenes.ContainsKey(sceneId) || _loadedScenes.Any(s => s.Key.buildIndex == sceneId))
+            if (_loadingScenes.ContainsKey(sceneName) || _loadedScenes.Any(s => s.Key.name.ToLowerInvariant() == sceneName.ToLowerInvariant()))
             {
                 return;
             }
 
             // Launch the asynchronous loading of the scene
-            Coroutine c = StartCoroutine(LoadSceneAsync(sceneId));
-            _loadingScenes.Add(sceneId, c);
+            Coroutine c = StartCoroutine(LoadSceneAsync(sceneName));
+            _loadingScenes.Add(sceneName, c);
         }
 
-        private IEnumerator LoadSceneAsync(int sceneId)
+        private IEnumerator LoadSceneAsync(string sceneName)
         {
-            Debug.Log($"Loading scene {sceneId}");
+            Debug.Log($"Loading scene \"{sceneName}\"");
             // Load the scene asynchronously
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneId, LoadSceneMode.Additive);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
             // Wait until the scene is loaded
             while (!asyncLoad.isDone)
@@ -168,15 +169,15 @@ namespace Assets.Script
             /* SCENE LOADED */
 
             // Remove from the loading scenes
-            _loadingScenes.Remove(sceneId);
-            Debug.Log($"Scene {sceneId} loaded");
+            _loadingScenes.Remove(sceneName);
+            Debug.Log($"Scene \"{sceneName}\" loaded");
 
             // Get the scene that was loaded
-            Scene scene = SceneManager.GetSceneByBuildIndex(sceneId);
+            Scene scene = SceneManager.GetSceneByName(sceneName);
             GameObject sceneMainGameObject = scene.GetRootGameObjects().FirstOrDefault();
             sceneMainGameObject.SetActive(false);
             _loadedScenes.Add(scene, sceneMainGameObject);
-            Debug.Log($"Scene {scene.name} added to loaded scenes with game object {sceneMainGameObject.name}");
+            Debug.Log($"Scene \"{scene.name}\" added to loaded scenes with game object {sceneMainGameObject.name}");
         }
     }
 }
