@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
 public class Interactable : MonoBehaviour
@@ -37,9 +36,9 @@ public class Interactable : MonoBehaviour
         //}
     }
 
-    public void Run(GameObject sender, InputManager inputManager)
+    public virtual void Run(GameObject sender, InputManager inputManager)
     {
-        Debug.Log("Interactable is running");
+        Debug.Log($"Interaction with object {name} triggered");
 
         if (_isGrabbable)
         {

@@ -37,18 +37,25 @@ public class HandController : MonoBehaviour
             else
                 _collider.enabled = false;
         }
+
+        SendRayCast();
     }
 
     private void AnimateHand() =>
         _animator.SetFloat("Trigger", Mathf.Lerp(0f, 1f, _inputManager.TriggerValue));
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) => CheckAndRunInteraction(other);
+    private void SendRayCast()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+            CheckAndRunInteraction(hit.collider);
+    }
+
+    private void CheckAndRunInteraction(Collider other)
     {
         if (other.CompareTag("Interactable"))
         {
-            Interactable interactable = other.GetComponent<Interactable>();
-
-            if (interactable != null)
+            if (other.TryGetComponent<Interactable>(out var interactable))
             {
                 interactable.Run(gameObject, _inputManager);
             }
