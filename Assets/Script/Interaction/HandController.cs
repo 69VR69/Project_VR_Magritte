@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-    [SerializeField]
     private InputManager _inputManager;
     private Animator _animator;
     private BoxCollider _collider;
@@ -17,7 +16,7 @@ public class HandController : MonoBehaviour
 
         if (_inputManager == null)
         {
-            Debug.LogError("InputManager is null");
+            _inputManager = InputManager.Instance;
         }
 
         if (_animator == null)
@@ -47,6 +46,7 @@ public class HandController : MonoBehaviour
     private void OnTriggerEnter(Collider other) => CheckAndRunInteraction(other);
     private void SendRayCast()
     {
+        Debug.Log($"SendRayCast from {transform.position} to {transform.forward}");
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
             CheckAndRunInteraction(hit.collider);
     }
