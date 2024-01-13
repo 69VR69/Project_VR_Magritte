@@ -1506,7 +1506,7 @@ GameObject:
   - component: {fileID: 3478990768561470794}
   m_Layer: 0
   m_Name: NewPrefabMatches
-  m_TagString: Untagged
+  m_TagString: MatchesBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
