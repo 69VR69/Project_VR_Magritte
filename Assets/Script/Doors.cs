@@ -14,7 +14,8 @@ public class Doors : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.tag == "Player") {
+		Debug.Log("test doors");
+		if (col.gameObject.tag != "Wall") {
 	
 			doorOpen = true;
 			DoorControl ("Open");

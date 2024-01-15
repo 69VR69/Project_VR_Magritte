@@ -8,6 +8,7 @@ TagManager:
   - InitPosition
   - InitPositionMenu
   - Interactable
+  - Wall
   layers:
   - Default
   - TransparentFX
