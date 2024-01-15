@@ -41,12 +41,12 @@ namespace Assets.Script
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                ActivateScene(1);
+                ChangeSceneTo(1);
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                ActivateScene(2);
+                ChangeSceneTo(2);
             }
         }
 
@@ -74,7 +74,7 @@ namespace Assets.Script
 
             if (sceneToActivate == null || sceneMainGameObject == null)
             {
-                Debug.LogError($"Scene {sceneId} or his gameObject not found to be activated");
+                Debug.LogError($"Scene {sceneId} or his gameObject not found to be activated, try again later");
                 return;
             }
 
