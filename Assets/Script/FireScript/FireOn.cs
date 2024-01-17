@@ -7,9 +7,7 @@ public class FireOn : MonoBehaviour
 
     public GameObject fire;
     
-
-    // Update is called once per frame
-    void Start()
+    public void IgniteFire()
     {
         Instantiate(fire, transform.position, transform.rotation);
     }
