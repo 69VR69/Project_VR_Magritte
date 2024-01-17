@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class StemInteraction : Interactable
 {
     public GameObject spawner;
+    private bool hasIgnited;
 
     private void OnCollisionEnter(Collision collision)
     {
         
-        if (collision.gameObject.CompareTag("Matchesbox"))
-        { 
+        if (collision.gameObject.CompareTag("MatchesBox") && !hasIgnited)
+        {
+            Debug.Log("Collision with matches box");
             spawner.GetComponent<FireOn>().IgniteFire();
+            hasIgnited = true;
         }
     }
 

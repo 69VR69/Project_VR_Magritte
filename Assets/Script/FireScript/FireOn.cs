@@ -9,6 +9,8 @@ public class FireOn : MonoBehaviour
     
     public void IgniteFire()
     {
+        Debug.Log("Ignite fire");
+        Debug.Log(fire.name);
         Instantiate(fire, transform.position, transform.rotation);
     }
 }
