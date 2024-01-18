@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606874810268814852, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606874810268814852, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7606874810268814855, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7606874810945771575, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -221,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529398914d4d70d499d3cce9894fc974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  mouseSensitivity: 3
+  speed: 1
+  mouseSensitivity: 1
   _inputManager: {fileID: 849653167792525252}
 --- !u!54 &299383632
 Rigidbody:
@@ -249,7 +253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 849653166109477426, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 849653166109477426, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,19 +302,27 @@ PrefabInstance:
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _player
       value: 
+      objectReference: {fileID: 299383629}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _scenes.Array.data[0]
-      value: bedroom
+      value: chimneyroom
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _scenes.Array.data[1]
+      value: bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[2]
       value: startroom
       objectReference: {fileID: 0}
     - target: {fileID: 5025806808710745453, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 299383629}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
 --- !u!114 &849653167792525252 stripped

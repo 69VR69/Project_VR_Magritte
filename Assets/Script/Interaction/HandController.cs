@@ -53,13 +53,10 @@ public class HandController : MonoBehaviour
 
     private void CheckAndRunInteraction(Collider other)
     {
-        Debug.Log("toto");
         if (other.CompareTag("Interactable"))
         {
-            Debug.Log("tota");
             if (other.TryGetComponent<Interactable>(out var interactable))
             {
-                Debug.Log("toti");
                 interactable.Run(gameObject, _inputManager);
             }
         }

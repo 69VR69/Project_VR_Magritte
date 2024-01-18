@@ -32,8 +32,8 @@ public class Interactable : MonoBehaviour
 
         //if (_isGrabbable)
         //{
-            // add component XRGrabInteractable
-            //gameObject.AddComponent<XRGrabInteractable>();
+        // add component XRGrabInteractable
+        //gameObject.AddComponent<XRGrabInteractable>();
         //}
     }
 
@@ -41,15 +41,12 @@ public class Interactable : MonoBehaviour
     {
         Debug.Log($"Interaction with object {name} triggered");
 
-        //sender.GetComponent<Renderer>().material.color = Color.gray;
-
         if (_isGrabbable)
         {
             if (inputManager.IsTrigger)
             {
                 if (_isGrabbed)
                 {
-                    //GetComponent<Renderer>().material.color = Color.yellow;
                     _rigidbody.useGravity = false;
                     _collider.isTrigger = true;
                     transform.SetParent(null);
@@ -57,7 +54,6 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    //GetComponent<Renderer>().material.color = Color.red;
                     _rigidbody.useGravity = false;
                     _collider.isTrigger = true;
                     transform.SetParent(sender.transform);

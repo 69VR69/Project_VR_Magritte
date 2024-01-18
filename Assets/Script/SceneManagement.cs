@@ -43,11 +43,6 @@ namespace Assets.Script
             {
                 ChangeSceneTo("chimneyroom");
             }
-
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                ChangeSceneTo("bedroom");
-            }
         }
 
         public void ChangeSceneTo(string sceneName)
