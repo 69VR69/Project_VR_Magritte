@@ -57,6 +57,7 @@ public class HandController : MonoBehaviour
         {
             if (other.TryGetComponent<Interactable>(out var interactable))
             {
+                Debug.Log(_inputManager);
                 interactable.Run(gameObject, _inputManager);
             }
         }

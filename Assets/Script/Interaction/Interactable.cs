@@ -40,7 +40,15 @@ public class Interactable : MonoBehaviour
     {
         Debug.Log($"Interaction with object {name} triggered");
 
-        sender.GetComponent<Renderer>().material.color = Color.gray;
+        Renderer renderer = sender.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = Color.gray;
+        }
+        else
+        {
+            Debug.LogWarning("Renderer not found on the game object.");
+        }
 
         if (_isGrabbable)
         {
