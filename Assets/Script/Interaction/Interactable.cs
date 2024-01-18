@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour
     {
         Debug.Log($"Interaction with object {name} triggered");
 
-        sender.GetComponent<Renderer>().material.color = Color.gray;
+        GetComponent<Renderer>().material.color = Color.gray;
 
         if (_isGrabbable)
         {

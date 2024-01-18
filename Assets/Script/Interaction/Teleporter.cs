@@ -11,10 +11,10 @@ namespace Assets.Script.Interaction
         {
             base.Run(sender, inputManager);
 
-            sender.GetComponent<Renderer>().material.color = Color.green;
+            GetComponent<Renderer>().material.color = Color.green;
             if (inputManager.IsTrigger)
             {
-                sender.GetComponent<Renderer>().material.color = Color.yellow;
+                GetComponent<Renderer>().material.color = Color.blue;
                 // Do the teleportation
                 GameManager.Instance.SceneManager.ChangeSceneTo(_nextRoom);
             }

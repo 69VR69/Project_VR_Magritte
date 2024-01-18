@@ -57,6 +57,7 @@ public class HandController : MonoBehaviour
         {
             if (other.TryGetComponent<Interactable>(out var interactable))
             {
+                other.GetComponent<Renderer>().material.color = Color.black;
                 interactable.Run(gameObject, _inputManager);
             }
         }
