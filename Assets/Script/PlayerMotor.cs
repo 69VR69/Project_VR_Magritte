@@ -37,6 +37,7 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
+        rb.velocity = Vector3.zero;
     }
 
     private void performRotation()
