@@ -34,15 +34,9 @@ namespace Assets.Script
         {
             // Prepare the first scene
             PrepareScene(_scenes.FirstOrDefault());
-        }
 
-        // TEST ONLY
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1) || InputManager.Instance.IsBackButton)
-            {
-                ChangeSceneTo("startroom");
-            }
+            // When the loading is finished, activate the first scene
+            StartCoroutine(ActivateFirstScene());
         }
 
         public void ChangeSceneTo(string sceneName)
@@ -173,6 +167,18 @@ namespace Assets.Script
             sceneMainGameObject.SetActive(false);
             _loadedScenes.Add(scene, sceneMainGameObject);
             Debug.Log($"Scene \"{scene.name}\" added to loaded scenes with game object {sceneMainGameObject.name}");
+        }
+
+        private IEnumerator ActivateFirstScene()
+        {
+            // Wait until the first scene is loaded
+            while (_loadingScenes.Count > 0)
+            {
+                yield return null;
+            }
+
+            // Activate the first scene
+            ActivateScene(_scenes.FirstOrDefault());
         }
     }
 }
