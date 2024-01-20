@@ -3,26 +3,39 @@ using UnityEngine;
 
 public class MeltingIce : MonoBehaviour
 {
-    
     private bool isFlameActive = false;
+    private bool hasStartedMelting = false;
+    private bool waterSoundPlayed = false;
     public GameObject stemObject;
     public Material iceMat;
     public GameObject waterPrefab;
+    public AudioClip waterSound;
+    private AudioSource waterAudioSource;
+
+    private void Start()
+    {
+        waterAudioSource = gameObject.AddComponent<AudioSource>();
+        waterAudioSource.clip = waterSound;  
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject == stemObject && GameObject.FindWithTag("Flame") != null)
         {
-            
             isFlameActive = true;
-            StartCoroutine(FondreGlacon());
-            
+
+            if (!hasStartedMelting)
+            {
+                StartCoroutine(FondreGlacon());
+                hasStartedMelting = true;
+            }
         }
     }
 
     IEnumerator FondreGlacon()
     {
-        float tempsDeFondre = 10.0f;
+        Debug.Log("FondreGlacon");
+        float tempsDeFondre = 12.0f;
         float tempsTotal = 0f;
 
         float meltingInitialValue = 0.0f;
@@ -32,31 +45,38 @@ public class MeltingIce : MonoBehaviour
         {
             float proportion = tempsTotal / tempsDeFondre;
 
-            // Interpolation linéaire pour ajuster progressivement les valeurs
             float newMeltingValue = Mathf.Lerp(meltingInitialValue, meltingFinalValue, proportion);
 
-            // Appliquer les nouvelles valeurs au matériau du glaçon
             iceMat.SetFloat("_Melting", newMeltingValue);
 
             yield return null;
             tempsTotal += Time.deltaTime;
         }
 
-        // Remettre la propriété de fonte à 0 après la fonte complète
-        iceMat.SetFloat("_Melting", 0.0f);
+        
 
-        // Détruire l'objet Ice si la flamme est toujours active
-        if (isFlameActive)
+        Debug.Log("Son du feu eteint");
+        stemObject.GetComponent<StemInteraction>().ExtinguishFire();
+
+        if (waterPrefab != null && !waterSoundPlayed)
         {
-            // enlever le son du feu
-            stemObject.GetComponent<StemInteraction>().ExtinguishFire();
-            Destroy(gameObject);
-            // Augmenter l'échelle de l'objet "Flaque d'eau"
-            if (waterPrefab != null)
-            {
-                Vector3 newScale = waterPrefab.transform.localScale * 1.25f; // Ajustez la valeur 1.5f selon vos besoins
-                waterPrefab.transform.localScale = newScale;
+            Vector3 newScale = waterPrefab.transform.localScale * 1.25f;
+            waterPrefab.transform.localScale = newScale;
+
+            if (waterAudioSource != null && waterSound != null)
+            {   
+                Debug.Log("Son de l'eau");
+                waterAudioSource.Play();
+
+                while (waterAudioSource.isPlaying)
+                {
+                    yield return null;
+                }
+
+                waterSoundPlayed = true;
             }
         }
+        iceMat.SetFloat("_Melting", 0.0f);
+        Destroy(gameObject);
     }
 }
