@@ -9,7 +9,7 @@ public class HandController : MonoBehaviour
     private Animator _animator;
     private BoxCollider _collider;
 
-    private void Awake()
+    private void Start()
     {
         _collider = GetComponent<BoxCollider>();
         _animator = GetComponent<Animator>();
@@ -46,7 +46,6 @@ public class HandController : MonoBehaviour
     private void OnTriggerEnter(Collider other) => CheckAndRunInteraction(other);
     private void SendRayCast()
     {
-        Debug.Log($"SendRayCast from {transform.position} to {transform.forward}");
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
             CheckAndRunInteraction(hit.collider);
     }
@@ -54,12 +53,7 @@ public class HandController : MonoBehaviour
     private void CheckAndRunInteraction(Collider other)
     {
         if (other.CompareTag("Interactable"))
-        {
             if (other.TryGetComponent<Interactable>(out var interactable))
-            {
-                other.GetComponent<Renderer>().material.color = Color.black;
                 interactable.Run(gameObject, _inputManager);
-            }
-        }
     }
 }

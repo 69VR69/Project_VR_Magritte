@@ -13,6 +13,8 @@ namespace Assets.Script.Interaction
 
             if (inputManager.IsTrigger)
             {
+                Debug.Log($"Teleporting to {_nextRoom} through the teleporter \"{gameObject.name}\"");
+
                 // Do the teleportation
                 GameManager.Instance.SceneManager.ChangeSceneTo(_nextRoom);
             }

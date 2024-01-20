@@ -41,7 +41,7 @@ namespace Assets.Script
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) || InputManager.Instance.IsBackButton)
             {
-                ChangeSceneTo("chimneyroom");
+                ChangeSceneTo("startroom");
             }
         }
 

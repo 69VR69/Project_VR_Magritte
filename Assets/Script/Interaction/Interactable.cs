@@ -29,12 +29,6 @@ public class Interactable : MonoBehaviour
 
         _rigidbody.useGravity = false;
         _collider.isTrigger = true;
-
-        //if (_isGrabbable)
-        //{
-        // add component XRGrabInteractable
-        //gameObject.AddComponent<XRGrabInteractable>();
-        //}
     }
 
     public virtual void Run(GameObject sender, InputManager inputManager)
@@ -54,8 +48,8 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    _rigidbody.useGravity = false;
-                    _collider.isTrigger = true;
+                    _rigidbody.useGravity = true;
+                    _collider.isTrigger = false;
                     transform.SetParent(sender.transform);
                     _isGrabbed = true;
                 }
