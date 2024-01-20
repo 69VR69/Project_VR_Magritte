@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
+using Unity.XR.CoreUtils;
+
 using UnityEngine;
 
 public class HandController : MonoBehaviour
@@ -8,6 +10,8 @@ public class HandController : MonoBehaviour
     private InputManager _inputManager;
     private Animator _animator;
     private BoxCollider _collider;
+    [SerializeField]
+    private GameObject _handRay;
 
     private void Start()
     {
@@ -15,14 +19,13 @@ public class HandController : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         if (_inputManager == null)
-        {
             _inputManager = InputManager.Instance;
-        }
 
         if (_animator == null)
-        {
             Debug.LogError("Animator is null");
-        }
+
+        if (_handRay == null)
+            Debug.LogError("HandRay is null");
     }
 
     private void Update()
@@ -46,7 +49,11 @@ public class HandController : MonoBehaviour
     private void OnTriggerEnter(Collider other) => CheckAndRunInteraction(other);
     private void SendRayCast()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+        // Align the ray with the VR controller's ray
+        Vector3 origin = transform.position;
+        Vector3 direction = _handRay.transform.forward;
+
+        if (Physics.Raycast(origin, direction, out RaycastHit hit))
             CheckAndRunInteraction(hit.collider);
     }
 
@@ -55,5 +62,15 @@ public class HandController : MonoBehaviour
         if (other.CompareTag("Interactable"))
             if (other.TryGetComponent<Interactable>(out var interactable))
                 interactable.Run(gameObject, _inputManager);
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_handRay != null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position, _handRay.transform.forward);
+
+        }
     }
 }
