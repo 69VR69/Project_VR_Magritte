@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051256940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e9560ce55e9614aa5037d015029ed4, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ca4360b089ec14d976f8c727e4d4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isGrabbable: 1
@@ -1285,7 +1285,7 @@ SkinnedMeshRenderer:
   m_DirtyAABB: 0
 --- !u!95 &109434731798814267
 Animator:
-  serializedVersion: 5
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1298,12 +1298,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &4874942843613371524
 Transform:
   m_ObjectHideFlags: 0
