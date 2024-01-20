@@ -10,7 +10,13 @@ public class FireOn : MonoBehaviour
     public void IgniteFire()
     {
         Debug.Log("Ignite fire");
-        Debug.Log(fire.name);
-        Instantiate(fire, transform.position, transform.rotation);
+        GameObject spawner = GameObject.Find("SpawnerFire");
+
+        // Instanciez la flamme au même endroit et avec la même rotation que le spawner
+        GameObject newFire = Instantiate(fire, transform.position, transform.rotation, spawner.transform);
+
+        // Ajustez l'échelle de la flamme pour qu'elle soit la même que celle du spawner
+        newFire.transform.localScale = spawner.transform.localScale;
+        
     }
 }

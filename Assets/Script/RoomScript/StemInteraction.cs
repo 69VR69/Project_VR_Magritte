@@ -19,13 +19,4 @@ public class StemInteraction : Interactable
         }
     }
 
-    public override void Run(GameObject sender, InputManager inputManager)
-    {
-        base.Run(sender, inputManager);
-
-        if (inputManager.IsTrigger)
-        {
-            Debug.Log("Stem triggered");
-        }
-    }
 }
