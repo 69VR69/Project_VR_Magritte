@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2229321290162321415}
   m_Layer: 0
   m_Name: Flame
-  m_TagString: Untagged
+  m_TagString: Flame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireMat: {fileID: 2100000, guid: 69af388d8b1821e48baab9f1507a272d, type: 2}
+  spawnerFire: {fileID: 0}

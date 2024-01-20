@@ -9,6 +9,9 @@ TagManager:
   - InitPositionMenu
   - Interactable
   - Wall
+  - MatchesBox
+  - Ice
+  - Flame
   layers:
   - Default
   - TransparentFX

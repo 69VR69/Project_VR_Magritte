@@ -92,8 +92,8 @@ Material:
     - _DistorsionAmount: 0.1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FadePower: 0.56
-    - _FadeScale: -3.9
+    - _FadePower: 2.4744027
+    - _FadeScale: -2.8091354
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
