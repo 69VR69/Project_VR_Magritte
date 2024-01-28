@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8b6ea4c59304c549a76bd7cc8ee6478, type: 2}
+    - target: {fileID: 2950204439688800837, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
+      propertyPath: m_Name
+      value: Ceiling
+      objectReference: {fileID: 0}
     - target: {fileID: 4679489198926077723, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -529,6 +533,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: -0.04, y: 0.15, z: 0.05}
   m_Center: {x: 0.00020732691, y: -0.011567182, z: 0.017539581}
+--- !u!1 &573896790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 766591835573816767, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+  m_PrefabInstance: {fileID: 1388055580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &573896791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573896790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000002, y: 2.220446e-16, z: 10.000002}
+  m_Center: {x: 0, y: 0.00000023841858, z: 0}
 --- !u!4 &869235199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6763046236917481911, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
@@ -539,6 +561,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7051140389761479121, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
   m_PrefabInstance: {fileID: 231077663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &997736553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8411645045399449507, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
+  m_PrefabInstance: {fileID: 198340997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &997736554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997736553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10.000001}
+  m_Center: {x: -0.0000038146973, y: 0, z: -0.00000047683716}
 --- !u!1001 &1388055580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -621,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 3202867372643058081, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
       propertyPath: m_LocalPosition.z
       value: -11.350004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396934951153613593, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+      propertyPath: m_Name
+      value: Ceiling
       objectReference: {fileID: 0}
     - target: {fileID: 3396934951153613593, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
       propertyPath: m_IsActive
@@ -904,6 +948,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+--- !u!1 &1414795375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7051140389928380216, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+  m_PrefabInstance: {fileID: 231077663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1414795376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414795375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10.000001}
+  m_Center: {x: 0.0000038146973, y: -0.00000047683716, z: 0.0000019073486}
 --- !u!1 &1514119409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4372277349026169527, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
@@ -921,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfb1f99c1678264c8482f76d7fb65b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 2800000, guid: cff17deba61b12d448ec6604a0fe939b, type: 3}
+  message: {fileID: 2800000, guid: 08de3032360ba5a4993222d26e5e54ff, type: 3}
   material: {fileID: 2100000, guid: 64c5ecbff2045064684aa2ac1319cb85, type: 2}
 --- !u!114 &1514119411
 MonoBehaviour:

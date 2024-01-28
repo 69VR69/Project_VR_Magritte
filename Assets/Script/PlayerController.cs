@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private float mouseSensitivity = 3f;
     [SerializeField]
     private InputManager _inputManager;
+    [SerializeField]
+    private Camera cam;
 
     private PlayerMotor motor;
     // Start is called before the first frame update
@@ -31,10 +33,25 @@ public class PlayerController : MonoBehaviour
         float xMov = val.x;
         float yMov = val.y;
 
-        Vector3 moveHorizontal = transform.right * xMov;
-        Vector3 moveVertical = transform.forward * yMov;
+        // Vector3 moveHorizontal = transform.right * xMov;
+        // Vector3 moveVertical = transform.forward * yMov;
 
-        Vector3 velocity = (moveVertical + moveHorizontal).normalized * speed;
+        // Vector3 velocity = (moveVertical + moveHorizontal).normalized * speed;
+
+        //camera direction
+        Vector3 camForward = cam.transform.forward;
+        Vector3 camRight = cam.transform.right;
+
+        camForward.y = 0; 
+        camRight.y = 0;
+
+        //create relate cam direction
+        Vector3 forwardRelative = yMov * camForward;
+        Vector3 rightRelative = xMov * camRight;
+
+        Vector3 moveDir = forwardRelative + rightRelative;
+
+        Vector3 velocity = moveDir.normalized*speed;
 
         motor.Move(velocity);
 
