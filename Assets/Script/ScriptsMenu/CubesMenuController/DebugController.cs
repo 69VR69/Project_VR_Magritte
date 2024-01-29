@@ -8,12 +8,24 @@ public class DebugController : Interactable
 {
     [SerializeField]
     public GameObject debugConsole;
+    public AudioClip grabSound;
+    private AudioSource grabAudioSource;        
+    private void Start()
+    {
+        grabAudioSource = gameObject.AddComponent<AudioSource>();   
+        grabAudioSource.clip = grabSound;
+    }
     public override void Run(GameObject sender, InputManager inputManager)
         {
             base.Run(sender, inputManager);
 
             if (inputManager.IsTrigger)
             {
+                
+                if (grabAudioSource != null && grabSound != null)
+                {
+                    grabAudioSource.Play();
+                }
                 if (debugConsole == null)
                 {
                     debugConsole = GameObject.Find("Console"); 

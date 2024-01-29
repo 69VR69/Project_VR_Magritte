@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class QuitController : Interactable
 {
     [SerializeField]
+    public AudioClip grabSound;
+    private AudioSource grabAudioSource;        
+    private void Start()
+    {
+        grabAudioSource = gameObject.AddComponent<AudioSource>();   
+        grabAudioSource.clip = grabSound;
+    }
     
     public override void Run(GameObject sender, InputManager inputManager)
         {
@@ -13,6 +20,11 @@ public class QuitController : Interactable
 
             if (inputManager.IsTrigger)
             {
+
+                if (grabAudioSource != null && grabSound != null)
+                {
+                    grabAudioSource.Play();
+                }
                 Debug.Log("Quitter");
                 Application.Quit();
             }
