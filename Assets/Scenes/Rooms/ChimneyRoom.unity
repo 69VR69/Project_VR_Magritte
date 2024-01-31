@@ -533,6 +533,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: -0.04, y: 0.15, z: 0.05}
   m_Center: {x: 0.00020732691, y: -0.011567182, z: 0.017539581}
+--- !u!1 &473050764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473050765}
+  - component: {fileID: 473050766}
+  m_Layer: 0
+  m_Name: DistanceControl_Board/Tripod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473050765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473050764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.73251, y: 0.2222606, z: 10.63319}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473050766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473050764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a526e1ec1874894448b96680910c6be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object1: {fileID: 1514119409}
+  _object2: {fileID: 955899653}
+  _distance: 0
+  message: {fileID: 0}
 --- !u!1 &573896790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 766591835573816767, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
@@ -561,6 +608,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7051140389761479121, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
   m_PrefabInstance: {fileID: 231077663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955899653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395329510977631864, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
+  m_PrefabInstance: {fileID: 198340997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &955899654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955899653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e760c511eb0e3b4ea9b048d9a1d8991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isGrabbable: 0
+  distance: {fileID: 0}
+  texture: {fileID: 0}
+  _nextRoom: 
 --- !u!1 &997736553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8411645045399449507, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
@@ -994,10 +1062,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1514119409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb6572738097db408e1348fc9860b91, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e760c511eb0e3b4ea9b048d9a1d8991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isGrabbable: 0
+  distance: {fileID: 473050766}
+  texture: {fileID: 2800000, guid: 08de3032360ba5a4993222d26e5e54ff, type: 3}
   _nextRoom: bedroom
 --- !u!54 &1514119412
 Rigidbody:
@@ -1156,4 +1226,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _object1: {fileID: 466469226}
   _object2: {fileID: 1514119409}
+  _distance: 1
   message: {fileID: 1514119410}
