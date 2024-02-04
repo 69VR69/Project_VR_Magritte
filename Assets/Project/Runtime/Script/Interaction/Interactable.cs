@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
 public class Interactable : MonoBehaviour
