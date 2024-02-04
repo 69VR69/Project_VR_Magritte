@@ -170,80 +170,84 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &866374752
+--- !u!4 &966863568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+  m_PrefabInstance: {fileID: 1544695765748929474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1036896223
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1435276111}
     m_Modifications:
-    - target: {fileID: 1709902763106856146, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
-      propertyPath: m_Name
-      value: WaterLiquid
-      objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalScale.x
-      value: 67.77995
+      value: 65.18
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 52.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.4095173
+      value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -304.224
+      value: -304.35
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -266.32
+      value: -266.358
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.54
+      value: 1.32
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4923605
+      value: 0.5104869
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.49429536
+      value: -0.50966954
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5061684
+      value: -0.4906841
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5069979
+      value: -0.48874253
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
+    - target: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 91.55
+      value: -87.635
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
+      propertyPath: m_Name
+      value: WaterLiquid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
---- !u!4 &866374753 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
+--- !u!4 &1036896224 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2085477980150249064, guid: 8eafe31fb08f0ef49af8cd8500c54a7e, type: 3}
-  m_PrefabInstance: {fileID: 866374752}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &966863568 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-  m_PrefabInstance: {fileID: 1544695765748929474}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc7b6d7afc4a27a48b7d2f89219f2232, type: 3}
+  m_PrefabInstance: {fileID: 1036896223}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435276110
 GameObject:
@@ -274,7 +278,7 @@ Transform:
   m_Children:
   - {fileID: 3745622627547687181}
   - {fileID: 835791555332776904}
-  - {fileID: 866374753}
+  - {fileID: 1036896224}
   m_Father: {fileID: 966863568}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
