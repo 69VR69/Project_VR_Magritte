@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         motor = GetComponent<PlayerMotor>();
+        _inputManager ??= InputManager.Instance;
     }
 
     // Update is called once per frame
@@ -45,5 +46,10 @@ public class PlayerController : MonoBehaviour
 
         motor.Rotate(rotation);
            
+    }
+
+    public void DisableMovement()
+    {
+        speed = 0;
     }
 }

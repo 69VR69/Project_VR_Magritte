@@ -15,9 +15,14 @@ public class InfiniteWallsCamController : MonoBehaviour
     [SerializeField]
     private Material _BaseTexture;
 
+    [Header("Walls")]
     [SerializeField]
     private GameObject[] _Walls = new GameObject[4];
     private int _CurrentCenterWall = -1;
+
+    [Header("Cameras")]
+    [SerializeField]
+    private GameObject _Cameras;
 
     private GameObject _Player;
     private Camera _Camera;
@@ -29,6 +34,18 @@ public class InfiniteWallsCamController : MonoBehaviour
             Debug.LogError("No walls found");
             return;
         }
+
+        if (_RightTexture == null || _BackTexture == null || _LeftTexture == null || _BaseTexture == null)
+        {
+            Debug.LogError("No textures found");
+            return;
+        }
+
+        if (_Cameras == null)
+        {
+            Debug.LogError("No cameras found");
+            return;
+        }
     }
 
     private void Update()
@@ -37,7 +54,8 @@ public class InfiniteWallsCamController : MonoBehaviour
         {
             _Player = GameObject.FindGameObjectWithTag("Player");
             _Camera = _Player.GetComponentInChildren<Camera>();
-            Debug.Log("Player found");
+            _Camera.transform.SetParent(_Cameras.transform);
+            _Camera.transform.localPosition = Vector3.zero;
         }
         else
         {
@@ -74,7 +92,6 @@ public class InfiniteWallsCamController : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Wall"))
             {
-                Debug.Log("Hit: " + hit.collider.gameObject.name);
                 return Array.IndexOf(_Walls, hit.collider.gameObject);
             }
         }
