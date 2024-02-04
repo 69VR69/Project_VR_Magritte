@@ -4,6 +4,7 @@ using UnityEngine;
 public class FireOff : MonoBehaviour
 {
     public Material fireMat;
+    public GameObject spawnerFire; 
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,8 +16,11 @@ public class FireOff : MonoBehaviour
 
     IEnumerator DesactiverFeuProgressif()
     {
-        float tempsDeFading = 3.0f;
+        float tempsDeFading = 10.0f;
         float tempsTotal = 0f;
+
+        float fadePowerInitial = 0.56f;
+        float fadeScaleInitial = -3.9f;
 
         float fadePowerFinal = 5.0f;
         float fadeScaleFinal = -1.37f;
@@ -26,8 +30,8 @@ public class FireOff : MonoBehaviour
             float proportion = tempsTotal / tempsDeFading;
 
             // Interpolation linéaire pour ajuster progressivement les valeurs
-            float newFadePower = Mathf.Lerp(0.38f, fadePowerFinal, proportion);
-            float newFadeScale = Mathf.Lerp(3.0f, fadeScaleFinal, proportion);
+            float newFadePower = Mathf.Lerp(fadePowerInitial, fadePowerFinal, proportion);
+            float newFadeScale = Mathf.Lerp(fadeScaleInitial, fadeScaleFinal, proportion);
 
             // Appliquer les nouvelles valeurs au matériau
             fireMat.SetFloat("_FadePower", newFadePower);
@@ -37,7 +41,11 @@ public class FireOff : MonoBehaviour
             tempsTotal += Time.deltaTime;
         }
 
-        // Désactiver le GameObject une fois la boucle terminée
-        gameObject.SetActive(false);
+        // Rétablir les valeurs initiales du matériau
+        fireMat.SetFloat("_FadePower", fadePowerInitial);
+        fireMat.SetFloat("_FadeScale", fadeScaleInitial);
+
+        // Détruire l'objet SpawnerFire et ses enfants
+        Destroy(spawnerFire);
     }
 }

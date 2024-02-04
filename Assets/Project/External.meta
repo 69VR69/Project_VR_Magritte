@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Project/External.meta
 guid: 5fe2a03b3d780d04bb3990eadd28a8d0
+========
+guid: 6f8c4e7aa5ffcdf479bfc5a3b1f8d0da
+>>>>>>>> Stashed changes:Assets/Polygonal Particles/Assets.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
