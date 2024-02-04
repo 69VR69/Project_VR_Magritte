@@ -5,11 +5,9 @@ using UnityEngine;
 public class DistanceControl : MonoBehaviour
 {
     [SerializeField]
-    public GameObject _object1;
+    GameObject _object1;
     [SerializeField]
-    public GameObject _object2;
-    [SerializeField]
-    float _distance;
+    GameObject _object2;
 
     [SerializeField] private PrintMessage message;
 
@@ -21,20 +19,13 @@ public class DistanceControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckDistance())
+        var distance = Vector3.Distance(_object1.transform.position, _object2.transform.position);
+        if (distance < 1 )
         {
+            Debug.Log("Distance petite");
             message.ShowMessage();
             return;
         }
-    }
 
-    public bool CheckDistance()
-    {
-        var distance = Vector3.Distance(_object1.transform.position, _object2.transform.position);
-        if (distance < _distance)
-        {
-            Debug.Log("Distance between the two objects < 1");
-            return true;
-        }else return false;
     }
 }

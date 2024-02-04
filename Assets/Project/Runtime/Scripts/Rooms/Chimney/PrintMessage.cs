@@ -18,7 +18,6 @@ public class PrintMessage : MonoBehaviour
     
     public void ShowMessage()
     {
-        Debug.Log("Revelation of the board : BedRoomScene");
         material.SetTexture("_MainTex", message);
     }
 }
