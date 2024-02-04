@@ -1,0 +1,18 @@
+{
+    "name": "Project.Menu",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ae131a12de5f33b4696a68d83d891880",
+        "GUID:dc960734dc080426fa6612f1c5fe95f3",
+        "GUID:781d3f72e45b2ed46b35a96cb2736482"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

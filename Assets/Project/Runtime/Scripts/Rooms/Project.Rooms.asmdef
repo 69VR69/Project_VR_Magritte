@@ -1,0 +1,16 @@
+{
+    "name": "Rooms",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ae131a12de5f33b4696a68d83d891880"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
