@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -146,11 +146,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 08cc2688f8b65e942a98b63e94f97d87, type: 3}
   m_PrefabInstance: {fileID: 1643144963}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &275184975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 08cc2688f8b65e942a98b63e94f97d87, type: 3}
-  m_PrefabInstance: {fileID: 1643144963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &771367459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1544695765591587085, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
@@ -198,7 +193,7 @@ Transform:
   m_Children:
   - {fileID: 3745622627547687181}
   - {fileID: 835791555332776904}
-  - {fileID: 275184975}
+  - {fileID: 1643144964}
   m_Father: {fileID: 966863568}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -365,6 +360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08cc2688f8b65e942a98b63e94f97d87, type: 3}
+--- !u!4 &1643144964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1643144963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2066373101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3327208243035732121, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
@@ -514,6 +514,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1544695764151535970, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a8b9f97d2e2d044ea49a950fa0f02b8, type: 2}
     - target: {fileID: 1544695764254884712, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -574,6 +578,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1544695765553806434, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98b4145536749f047a1c2690d79e6515, type: 2}
     - target: {fileID: 1544695765591587085, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Name
       value: bedroom
@@ -842,6 +850,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8868470073518067174, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bfca0f98cb72622459b2896758a87e67, type: 2}
     - target: {fileID: 9031699752626523968, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
       value: 11
