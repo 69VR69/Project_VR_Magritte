@@ -1,8 +1,8 @@
 {
-    "name": "Project",
+    "name": "Project.Utils",
     "rootNamespace": "",
     "references": [
-        "GUID:669e6fa0243a0e445a01794f570e3402"
+        "GUID:d8b63aba1907145bea998dd612889d6b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
