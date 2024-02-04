@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+using static UnityEditor.Experimental.GraphView.GraphView;
+
 public class RunAwayCube : MonoBehaviour
 {
-    [SerializeField]
     private GameObject _player; // Reference to the player XR rig
 
     [SerializeField]
@@ -21,23 +22,27 @@ public class RunAwayCube : MonoBehaviour
 
     private Vector3 _projectedPlayerPosition; // Projected player position on the initial direction of the cube
 
-    private void Start()
-    {
-        // Store the initial direction of the cube
-        _initialDirection = transform.position - _player.transform.position;
-        _initialDirection.y = 0;
-    }
-
     private void Update()
     {
-        // Rotate the cube to face the player
-        transform.LookAt(_player.transform);
+        if (_player == null)
+        {
+            _player = GameObject.FindGameObjectWithTag("Player");
 
-        // Project the player position on the initial direction of the cube
-        ProjectPlayerPositionOnAxis();
+            // Store the initial direction of the cube
+            _initialDirection = transform.position - _player.transform.position;
+            _initialDirection.y = 0;
+        }
+        else
+        {
+            // Rotate the cube to face the player
+            transform.LookAt(_player.transform);
 
-        // Move the cube along the initial direction
-        MoveAlongAxis();
+            // Project the player position on the initial direction of the cube
+            ProjectPlayerPositionOnAxis();
+
+            // Move the cube along the initial direction
+            MoveAlongAxis();
+        }
     }
 
     // Project the player position on the initial direction of the cube
