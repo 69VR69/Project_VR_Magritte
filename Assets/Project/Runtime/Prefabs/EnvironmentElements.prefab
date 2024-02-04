@@ -246,10 +246,10 @@ MonoBehaviour:
   _tagTpPoint: InitPosition
   _player: {fileID: 0}
   _scenes:
-  - jokerroom
   - startroom
   - chimneyroom
   - bedroom
+  - jokerroom
 --- !u!1 &849653166462371472
 GameObject:
   m_ObjectHideFlags: 0
