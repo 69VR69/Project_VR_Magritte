@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
@@ -40,15 +40,13 @@ public class Interactable : MonoBehaviour
             {
                 if (_isGrabbed)
                 {
-                    _rigidbody.useGravity = false;
-                    _collider.isTrigger = true;
+                    _collider.isTrigger = false;
                     transform.SetParent(null);
                     _isGrabbed = false;
                 }
                 else
                 {
-                    _rigidbody.useGravity = true;
-                    _collider.isTrigger = false;
+                    _collider.isTrigger = true;
                     transform.SetParent(sender.transform);
                     _isGrabbed = true;
                 }
