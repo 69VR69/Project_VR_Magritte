@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour
 {
     private Vector3 velocity;
-    private Vector3 rotation;
+    private Quaternion rotation;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class PlayerMotor : MonoBehaviour
         velocity = _velocity;
     }
 
-    public void Rotate(Vector3 _rotation)
+    public void Rotate(Quaternion _rotation)
     {
         rotation = _rotation;
     }
@@ -42,7 +42,8 @@ public class PlayerMotor : MonoBehaviour
 
     private void performRotation()
     {
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+        rb.MoveRotation(rotation);
+
     }
     // Update is called once per frame
     void Update()
