@@ -1,14 +1,15 @@
 using System.Collections;
+
 using UnityEngine;
 
 public class FireOff : MonoBehaviour
 {
     public Material fireMat;
-    public GameObject spawnerFire; 
+    public GameObject spawnerFire;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Ice"))
+        if (other.gameObject.CompareTag("Ice"))
         {
             StartCoroutine(DesactiverFeuProgressif());
         }
