@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class StemInteraction : Interactable
@@ -9,25 +10,25 @@ public class StemInteraction : Interactable
     public AudioClip ignitionSound;      // Son lors de l'allumage
     public AudioClip continuousSound;    // Son feu continu
     public AudioClip grabSound;          // Son de grab
-    private AudioSource ignitionAudioSource;      
-    private AudioSource continuousAudioSource;    
-    private AudioSource grabAudioSource;          
+    private AudioSource ignitionAudioSource;
+    private AudioSource continuousAudioSource;
+    private AudioSource grabAudioSource;
 
     private void Start()
     {
-        
+
         ignitionAudioSource = gameObject.AddComponent<AudioSource>();
         ignitionAudioSource.clip = ignitionSound;
         continuousAudioSource = gameObject.AddComponent<AudioSource>();
         continuousAudioSource.clip = continuousSound;
-        continuousAudioSource.loop = true; 
+        continuousAudioSource.loop = true;
         grabAudioSource = gameObject.AddComponent<AudioSource>();
         grabAudioSource.clip = grabSound;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("MatchesBox") && !hasIgnited)
+        if (other.gameObject.CompareTag("MatchesBox") && !hasIgnited)
         {
             Debug.Log("Collision with matches box");
             spawner.GetComponent<FireOn>().IgniteFire();

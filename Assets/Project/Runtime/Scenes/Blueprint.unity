@@ -264,6 +264,10 @@ PrefabInstance:
       propertyPath: _scenes.Array.data[2]
       value: chimneyroom
       objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[3]
+      value: jokerroom
+      objectReference: {fileID: 0}
     - target: {fileID: 5025806808710745453, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _player
       value: 
