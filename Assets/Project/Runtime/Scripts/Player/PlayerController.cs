@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
     private InputManager _inputManager;
 
     private PlayerMotor motor;
+    private Camera _camera;
     // Start is called before the first frame update
     void Start()
     {
         motor = GetComponent<PlayerMotor>();
         _inputManager ??= InputManager.Instance;
+        _camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -40,11 +42,9 @@ public class PlayerController : MonoBehaviour
         motor.Move(velocity);
 
         //calcul de la rotation du routeur en un Vector3
-        float yRot = Input.GetAxisRaw("Mouse X");
+        Quaternion _rot = _camera.transform.rotation;
 
-        Vector3 rotation = new Vector3(0, yRot, 0) * mouseSensitivity;
-
-        motor.Rotate(rotation);
+        motor.Rotate(_rot);
            
     }
 
