@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299383631, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 299383631, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: _inputManager
       value: 
@@ -252,6 +256,30 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 299383629}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[0]
+      value: startroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[1]
+      value: chimneyroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[2]
+      value: bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[3]
+      value: jokerroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[4]
+      value: testroom
+      objectReference: {fileID: 0}
     - target: {fileID: 5025806808710745453, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _player
       value: 
