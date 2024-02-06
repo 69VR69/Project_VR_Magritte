@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -335,117 +335,6 @@ Transform:
   m_Father: {fileID: 1007813913}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
---- !u!1001 &458533741
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1031807272}
-    m_Modifications:
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 572.7896
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 274.6667
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 291
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 100.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 137.33333
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282076, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_Name
-      value: Credits
-      objectReference: {fileID: 0}
-    - target: {fileID: 5310494387736282076, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
---- !u!224 &458533742 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5310494387736282064, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-  m_PrefabInstance: {fileID: 458533741}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &458533743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5310494387736282076, guid: 4680cedbc8cfe294b9ac9ff354e29662, type: 3}
-  m_PrefabInstance: {fileID: 458533741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &669541202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,6 +345,10 @@ PrefabInstance:
     - target: {fileID: 3645888394030033575, guid: 3f4dce55df3aa2f4591f21a226e8cf45, type: 3}
       propertyPath: m_Name
       value: Jocker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645888394030033575, guid: 3f4dce55df3aa2f4591f21a226e8cf45, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3645888394030033595, guid: 3f4dce55df3aa2f4591f21a226e8cf45, type: 3}
       propertyPath: m_RootOrder
@@ -562,8 +455,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1031807272}
-  - component: {fileID: 1031807273}
-  - component: {fileID: 1031807274}
   m_Layer: 0
   m_Name: jokerRoom
   m_TagString: Untagged
@@ -586,50 +477,9 @@ Transform:
   - {fileID: 5766786096311016488}
   - {fileID: 669541203}
   - {fileID: 1007813913}
-  - {fileID: 458533742}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1031807273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031807271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50be4899e031d604db37e16685d78a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _RightTexture: {fileID: 2100000, guid: 5028cc41d5eeafe48bf045605ebac064, type: 2}
-  _BackTexture: {fileID: 2100000, guid: 407e84ff5f27ff4498caead8ca92bda3, type: 2}
-  _LeftTexture: {fileID: 2100000, guid: c1b424e2638f619448275885cd0bf179, type: 2}
-  _BaseTexture: {fileID: -3963241562183589234, guid: 90db9665eb3e0ee499b1ff13db8764ef, type: 3}
-  _Walls:
-  - {fileID: 5766786097557417438}
-  - {fileID: 5766786095949142838}
-  - {fileID: 5766786097325379519}
-  - {fileID: 5766786097374647914}
-  _Cameras: {fileID: 1007813912}
---- !u!114 &1031807274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031807271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d77089d4ea4e648a1227ba6650734c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EndingScreen: {fileID: 458533743}
-  _TimeToWait: 10
-  _EndScreenDuration: 5
-  _InitialPosition: {fileID: 5766786097623927178}
-  _TimerStarted: 0
-  _ShowEndingScreen: 0
 --- !u!1 &1974396678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1358,7 @@ GameObject:
   - component: {fileID: 5766786097623927181}
   m_Layer: 0
   m_Name: InitPosition
-  m_TagString: Untagged
+  m_TagString: InitPosition
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

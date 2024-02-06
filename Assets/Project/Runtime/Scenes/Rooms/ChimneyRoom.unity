@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,6 +199,18 @@ PrefabInstance:
       propertyPath: newboard
       value: 
       objectReference: {fileID: 1009604917}
+    - target: {fileID: 1514119411, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: _nextRoom
+      value: bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514119411, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: _isGrabbable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372277349026169527, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7051140389761479121, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -247,8 +259,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: brickroom
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1514119411, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
 --- !u!4 &360605027 stripped
 Transform:
