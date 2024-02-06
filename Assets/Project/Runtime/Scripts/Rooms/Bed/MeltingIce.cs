@@ -1,4 +1,5 @@
 using System.Collections;
+
 using UnityEngine;
 
 public class MeltingIce : MonoBehaviour
@@ -15,12 +16,11 @@ public class MeltingIce : MonoBehaviour
     private void Start()
     {
         waterAudioSource = gameObject.AddComponent<AudioSource>();
-        waterAudioSource.clip = waterSound;  
+        waterAudioSource.clip = waterSound;
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject == stemObject && GameObject.FindWithTag("Flame") != null)
+        if (other.gameObject == stemObject && GameObject.FindWithTag("Flame") != null)
         {
             isFlameActive = true;
 
@@ -30,6 +30,7 @@ public class MeltingIce : MonoBehaviour
                 hasStartedMelting = true;
             }
         }
+
     }
 
     IEnumerator FondreGlacon()
@@ -53,7 +54,7 @@ public class MeltingIce : MonoBehaviour
             tempsTotal += Time.deltaTime;
         }
 
-        
+
 
         Debug.Log("Son du feu eteint");
         stemObject.GetComponent<StemInteraction>().ExtinguishFire();
@@ -64,7 +65,7 @@ public class MeltingIce : MonoBehaviour
             waterPrefab.transform.localScale = newScale;
 
             if (waterAudioSource != null && waterSound != null)
-            {   
+            {
                 Debug.Log("Son de l'eau");
                 waterAudioSource.Play();
 

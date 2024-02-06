@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalScale.x
@@ -162,51 +162,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalScale.z
-      value: 13.3
+      value: 2.718254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -304.35
+      value: -304.2189
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -266.38
+      value: -266.3376
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.32
+      value: 1.4234123
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5104869
+      value: 0.461706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50966954
+      value: -0.4465291
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.4906841
+      value: -0.5482981
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.48874253
+      value: -0.535545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -91.606
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 89.922
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -87.635
+      value: -189.998
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed8c31bbddab3984fa92ca5944055fef, type: 2}
     - target: {fileID: 919132149155446097, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
       propertyPath: m_Name
-      value: uploads_files_2874428_Ice 1
+      value: WaterLiquid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
@@ -232,6 +236,11 @@ AudioListener:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
   m_PrefabInstance: {fileID: 1544695765748929474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1138424422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b604ea5c9ec95ef468a72195e3dc8373, type: 3}
+  m_PrefabInstance: {fileID: 488709470}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435276110
 GameObject:
@@ -275,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7845913212085824400, guid: e79181bd674f8ef43ba74f40c91b430d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7845913212085824400, guid: e79181bd674f8ef43ba74f40c91b430d, type: 3}
       propertyPath: m_LocalScale.x
@@ -352,7 +361,7 @@ Rigidbody:
   m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -369,7 +378,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066373101}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.3457851, y: 0.7500006, z: 3.5000024}
@@ -403,7 +412,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832149484999239655}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.024801282, y: 0.02258205, z: 0.025766602}
@@ -419,7 +428,7 @@ Rigidbody:
   m_Mass: 20
   m_Drag: 1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -433,13 +442,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 832149484999239655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2445caba2a6eb245abd2b808cb18903, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cd578d39c6c88044b7e7a2602d3bd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stemObject: {fileID: 1544695765748929476}
-  iceMat: {fileID: 2100000, guid: ed8c31bbddab3984fa92ca5944055fef, type: 2}
-  waterPrefab: {fileID: 0}
-  waterSound: {fileID: 8300000, guid: 13641ab4a36453346aa7349b195e48c9, type: 3}
+  iceMat: {fileID: 2100000, guid: 0d2c97c54d5917149bdd9f4186938ce3, type: 2}
+  waterPrefab: {fileID: 1138424422}
+  waterSound: {fileID: 8300000, guid: a334687a0752ad9409be59223f613f24, type: 3}
 --- !u!4 &835791555332776904
 Transform:
   m_ObjectHideFlags: 0
@@ -448,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6085036180147778729}
   m_LocalRotation: {x: -0.1222298, y: 0.647252, z: 0.13952702, w: 0.73936254}
-  m_LocalPosition: {x: -303.59, y: -266.1, z: 1.35}
+  m_LocalPosition: {x: -304.488, y: -266.1, z: 1.347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1435276111}
@@ -481,13 +490,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 883157246, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 883157249, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 461870306579731882, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1366592514996101470, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
@@ -557,6 +570,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1544695765280719908, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265.862
+      objectReference: {fileID: 0}
     - target: {fileID: 1544695765553806429, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Size.y
       value: 0.9999999
@@ -582,16 +599,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7338574
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4143237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2354
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.733643
+      value: 251.71
       objectReference: {fileID: 0}
     - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 265.36462
+      value: 374.72
       objectReference: {fileID: 0}
     - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11875248
+      value: -1.2089
       objectReference: {fileID: 0}
     - target: {fileID: 1544695765591587090, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalRotation.w
@@ -891,25 +920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isGrabbable: 1
   spawner: {fileID: 1544695765748929475}
-  ignitionSound: {fileID: 8300000, guid: 27e1bc76fc9a0ae4bbb4215fd2086ba0, type: 3}
-  continuousSound: {fileID: 8300000, guid: be6053c4b14cf324292700e035ff0f38, type: 3}
-  grabSound: {fileID: 8300000, guid: 321989b5a21f9d44e938dbb847662c89, type: 3}
---- !u!54 &1544695765748929484
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544695765748929476}
-  serializedVersion: 2
-  m_Mass: 7
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  ignitionSound: {fileID: 8300000, guid: cec855bef00a7af4fb0220f0746240df, type: 3}
+  continuousSound: {fileID: 8300000, guid: bebfe333f11f82e44843e9b7c94a20e9, type: 3}
+  grabSound: {fileID: 8300000, guid: 68e8c57c9ecd8ef43997b09a358c05d0, type: 3}
 --- !u!114 &1544695765748929485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isGrabbable: 0
-  _nextRoom: jokerroom
+  _nextRoom: Jokerroom
 --- !u!54 &6085036180147778731
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1076,7 +1089,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
