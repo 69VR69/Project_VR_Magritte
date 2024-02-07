@@ -10,8 +10,11 @@ public class Interactable : MonoBehaviour
 
     private bool _isGrabbed = false;
 
+    private Outliner _outline;
+
     private void Awake()
     {
+        _outline = GetComponentInChildren<Outliner>();
         _collider = GetComponent<BoxCollider>();
 
         if (_collider == null)
@@ -25,6 +28,12 @@ public class Interactable : MonoBehaviour
     public virtual void Run(GameObject sender, InputManager inputManager)
     {
         Debug.Log($"Interaction with object {name} triggered");
+
+        // Activate outline if exists
+        if (_outline != null)
+        {
+            _outline.ActiveOutline();
+        }
 
         if (_isGrabbable)
         {
