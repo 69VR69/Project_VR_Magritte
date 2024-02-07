@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 299383631, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: speed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 299383631, guid: 8f635ce0feb409044827ad8b0eac6f13, type: 3}
       propertyPath: _inputManager
@@ -406,19 +406,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _scenes.Array.data[0]
-      value: jokerroom
-      objectReference: {fileID: 0}
-    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
-      propertyPath: _scenes.Array.data[1]
       value: startroom
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
-      propertyPath: _scenes.Array.data[2]
+      propertyPath: _scenes.Array.data[1]
       value: chimneyroom
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
-      propertyPath: _scenes.Array.data[3]
+      propertyPath: _scenes.Array.data[2]
       value: bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: _scenes.Array.data[3]
+      value: jokerroom
       objectReference: {fileID: 0}
     - target: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _scenes.Array.data[4]
