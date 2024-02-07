@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -378,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 851628d059ac82349879a2c8bdc1265b, type: 2}
+    - target: {fileID: 5310494386927772526, guid: b2637787bbc87734585238c493fa6c06, type: 3}
+      propertyPath: m_Text
+      value: "Merci d'avoir jou\xE9 !\n\nD\xE9veloppeurs\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -638,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _EndingScreen: {fileID: 0}
+  _TimeToWait: 2
   _EndScreenDuration: 20
   _InitialPosition: {fileID: 5766786097623927178}
   _TimerStarted: 0

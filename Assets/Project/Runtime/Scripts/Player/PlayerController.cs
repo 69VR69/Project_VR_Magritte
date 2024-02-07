@@ -31,11 +31,18 @@ public class PlayerController : MonoBehaviour
         //Calculer la vitesse du mouvement du joueur 
         //float xMov = Input.GetAxisRaw("Horizontal");
         //float yMov = Input.GetAxisRaw("Vertical");
+
         float xMov = val.x;
         float yMov = val.y;
 
         Vector3 moveHorizontal = transform.right * xMov;
         Vector3 moveVertical = transform.forward * yMov;
+
+        // Vector3 xMov = val.x * _camera.transform.right;
+        // Vector3 yMov = val.y * _camera.transform.forward;
+
+        // Vector3 moveHorizontal = Vector3.Scale(transform.right,xMov);
+        // Vector3 moveVertical = Vector3.Scale(transform.forward,yMov);
 
         Vector3 velocity = (moveVertical + moveHorizontal).normalized * speed;
 
