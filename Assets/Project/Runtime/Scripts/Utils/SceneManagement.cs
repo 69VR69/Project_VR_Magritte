@@ -13,6 +13,8 @@ namespace Assets.Script
         private string _tagTpPoint = "InitPosition";
         [SerializeField]
         private GameObject _player;
+        [SerializeField]
+        private GameObject _debuConsole;
 
         [SerializeField]
         private List<string> _scenes = new List<string>();
@@ -32,6 +34,12 @@ namespace Assets.Script
 
         private void Start()
         {
+            // Try to get the console with the tag "Console"
+            if (_debuConsole == null)
+            {
+                _debuConsole = GameObject.FindGameObjectWithTag("Console");
+            }
+
             // Prepare the first scene
             PrepareScene(_scenes.FirstOrDefault());
 
@@ -87,6 +95,13 @@ namespace Assets.Script
             // Teleport the player to the spawn point in the sceneMainGameObject
             GameObject tpPoint = sceneMainGameObject.transform.Find(_tagTpPoint).gameObject;
             _player.transform.position = tpPoint.transform.position;
+
+            // If exist, place the debug console juste behind the initialPosition
+            if (_debuConsole != null)
+            {
+                Debug.Log($"Console position : {_debuConsole.transform.position}");
+                _debuConsole.transform.position = new Vector3(tpPoint.transform.position.x, tpPoint.transform.position.y, tpPoint.transform.position.z - 0.2f);
+            }
 
             // Deactivate the scene previous scene
             if (!string.IsNullOrWhiteSpace(previousSceneName))
