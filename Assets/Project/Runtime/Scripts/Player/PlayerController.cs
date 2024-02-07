@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
         motor.Move(velocity);
 
         //calcul de la rotation du routeur en un Vector3
-        Quaternion _rot = _camera.transform.rotation;
+        // Quaternion _rot = _camera.transform.rotation;
 
-        motor.Rotate(_rot);
+        // motor.Rotate(_rot);
            
     }
 
