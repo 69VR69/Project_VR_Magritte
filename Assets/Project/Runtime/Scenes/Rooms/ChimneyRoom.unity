@@ -373,6 +373,26 @@ PrefabInstance:
       propertyPath: _isGrabbable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1514119413, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28348896
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514119413, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_Size.z
+      value: 0.55990016
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514119413, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_Center.x
+      value: 0.05240162
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514119413, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0000004847313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514119413, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
+      propertyPath: m_Center.z
+      value: -0.00000024623478
+      objectReference: {fileID: 0}
     - target: {fileID: 4372277349026169527, guid: 68329e4fa20f2314eb574d46176b9c06, type: 3}
       propertyPath: m_TagString
       value: Interactable
