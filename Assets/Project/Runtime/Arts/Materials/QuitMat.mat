@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: QuitMat
-  m_Shader: {fileID: -6465566751694194690, guid: 37be1761975da4b49be2859aa8cca79b, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 716dc5d8a37b8fa49a8a8449f5d82bd9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,11 +60,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_19e60dae5bc9481692ad0a5892538e7d_Texture_1:
-        m_Texture: {fileID: 2800000, guid: cf1dc91ae212a574d86030fd0f189a3b, type: 3}
+        m_Texture: {fileID: 2800000, guid: f3b5be48a1f75e74184d3ba2478b545b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_1b857428b7dd4dd997846471ef9400ca_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 037c1e3bfb6fc48439801de5b626da90, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68c51a62e1a508f418b213f9828eb9ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
