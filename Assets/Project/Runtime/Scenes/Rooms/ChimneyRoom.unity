@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3103059075380425852, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3103059075380425852, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
       propertyPath: m_TagString
@@ -305,6 +305,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8620468261426340263, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
   m_PrefabInstance: {fileID: 198340997}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &198340999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198340998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb6572738097db408e1348fc9860b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isGrabbable: 0
+  _nextRoom: bedroom
 --- !u!65 &198341000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -323,20 +337,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3103059075380425852, guid: eb9b5fbf97a705546b2e1232c2d54123, type: 3}
   m_PrefabInstance: {fileID: 198340997}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &198341002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198341001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb6572738097db408e1348fc9860b91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isGrabbable: 0
-  _nextRoom: bedroom
 --- !u!65 &198341003
 BoxCollider:
   m_ObjectHideFlags: 0

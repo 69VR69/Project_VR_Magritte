@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1544695765553806429, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1544695765553806434, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
