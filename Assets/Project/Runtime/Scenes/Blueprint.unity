@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: _scenes.Array.data[4]
       value: testroom
       objectReference: {fileID: 0}
+    - target: {fileID: 849653166176742558, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+      propertyPath: SceneManager
+      value: 
+      objectReference: {fileID: 849653167792525254}
     - target: {fileID: 5025806808710745453, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
       propertyPath: _player
       value: 
@@ -442,6 +446,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 849653166109477426, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
   m_PrefabInstance: {fileID: 849653167792525251}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &849653167792525254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 849653166176742557, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
+  m_PrefabInstance: {fileID: 849653167792525251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe38142cbeb36e4d9f163fc06e37839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4874942843613371527 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5219062555169215300, guid: 0219f718e76d2234fab18b20b0e9650a, type: 3}
