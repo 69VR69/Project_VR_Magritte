@@ -19,11 +19,17 @@ public class StemInteraction : Interactable
 
         ignitionAudioSource = gameObject.AddComponent<AudioSource>();
         ignitionAudioSource.clip = ignitionSound;
+        ignitionAudioSource.playOnAwake = false;
+        ignitionAudioSource.Stop();
         continuousAudioSource = gameObject.AddComponent<AudioSource>();
         continuousAudioSource.clip = continuousSound;
-        continuousAudioSource.loop = true;
+        
+        continuousAudioSource.playOnAwake = false;
+        continuousAudioSource.Stop();
         grabAudioSource = gameObject.AddComponent<AudioSource>();
         grabAudioSource.clip = grabSound;
+        grabAudioSource.playOnAwake = false;
+        grabAudioSource.Stop();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,7 +49,9 @@ public class StemInteraction : Interactable
             if (continuousAudioSource != null && continuousSound != null)
             {
                 Debug.Log("son allumette");
+                continuousAudioSource.loop = true;
                 continuousAudioSource.Play();
+            
             }
         }
     }
