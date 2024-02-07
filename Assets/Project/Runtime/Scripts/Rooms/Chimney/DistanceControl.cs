@@ -5,9 +5,11 @@ using UnityEngine;
 public class DistanceControl : MonoBehaviour
 {
     [SerializeField]
-    GameObject _object1;
+    GameObject _objectlocomotive;
     [SerializeField]
-    GameObject _object2;
+    GameObject _objectbrickboard;
+    [SerializeField]
+    GameObject _newboard;
 
     [SerializeField] private PrintMessage message;
 
@@ -19,11 +21,14 @@ public class DistanceControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var distance = Vector3.Distance(_object1.transform.position, _object2.transform.position);
-        if (distance < 1 )
+        var distance = Vector3.Distance(_objectlocomotive.transform.position, _objectbrickboard.transform.position);
+        if (distance < 2 )
         {
-            Debug.Log("Distance petite");
-            message.ShowMessage();
+            Debug.Log("Short distance between the locomotive and the brickboard");
+            //message.ShowMessage();
+            _newboard.SetActive(true);
+            _objectbrickboard.SetActive(false);
+
             return;
         }
 
