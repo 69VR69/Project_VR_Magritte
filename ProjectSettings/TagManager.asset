@@ -12,6 +12,7 @@ TagManager:
   - MatchesBox
   - Ice
   - Flame
+  - Console
   layers:
   - Default
   - TransparentFX

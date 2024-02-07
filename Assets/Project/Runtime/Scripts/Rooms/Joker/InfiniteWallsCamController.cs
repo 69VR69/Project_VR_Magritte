@@ -25,7 +25,7 @@ public class InfiniteWallsCamController : MonoBehaviour
     private GameObject _Cameras;
 
     private GameObject _Player;
-    private Camera _Camera;
+    private Camera _PlayerCamera;
 
     private void Start()
     {
@@ -53,9 +53,9 @@ public class InfiniteWallsCamController : MonoBehaviour
         if (_Player == null)
         {
             _Player = GameObject.FindGameObjectWithTag("Player");
-            _Camera = _Player.GetComponentInChildren<Camera>();
-            _Camera.transform.SetParent(_Cameras.transform);
-            _Camera.transform.localPosition = Vector3.zero;
+            _PlayerCamera = _Player.GetComponentInChildren<Camera>();
+            _Cameras.transform.SetParent(_PlayerCamera.transform);
+            _Cameras.transform.localPosition = Vector3.zero;
         }
         else
         {
@@ -67,7 +67,7 @@ public class InfiniteWallsCamController : MonoBehaviour
     {
         // Get the wall in front of the player and the two walls on the sides
         int frontWall = GetWallInFront();
-        
+
         if (frontWall == -1 || _CurrentCenterWall == frontWall)
             return;
 
@@ -88,7 +88,7 @@ public class InfiniteWallsCamController : MonoBehaviour
     private int GetWallInFront()
     {
         // Send a raycast in front of the player to get the wall in front of him
-        if (Physics.Raycast(_Camera.transform.position, _Camera.transform.forward, out RaycastHit hit, 100))
+        if (Physics.Raycast(_PlayerCamera.transform.position, _PlayerCamera.transform.forward, out RaycastHit hit, 100))
         {
             if (hit.collider.gameObject.CompareTag("Wall"))
             {
@@ -110,10 +110,10 @@ public class InfiniteWallsCamController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (_Camera == null)
+        if (_PlayerCamera == null)
             return;
 
         Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(_Camera.transform.position, _Camera.transform.forward);
+        Gizmos.DrawRay(_PlayerCamera.transform.position, _PlayerCamera.transform.forward);
     }
 }
