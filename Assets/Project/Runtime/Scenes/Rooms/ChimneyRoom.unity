@@ -701,6 +701,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 969c79766bfafca46abff5acfd3306bb, type: 2}
+    - target: {fileID: 4768210832693193843, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359323421908585330, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0278
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359323421908585330, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.339
+      objectReference: {fileID: 0}
     - target: {fileID: 6703405585399039674, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -800,6 +812,10 @@ PrefabInstance:
     - target: {fileID: 6763046236917481912, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
       propertyPath: m_Name
       value: chimneyroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721142287814915095, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952095029649179664, guid: e535aae1a2e79db4c9dbf60f908189b4, type: 3}
       propertyPath: m_IsActive
