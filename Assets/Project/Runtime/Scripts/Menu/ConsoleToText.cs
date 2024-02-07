@@ -15,6 +15,7 @@ public class ConsoleToText : MonoBehaviour
     private void Start()
     {
         // Exemple de message d'erreur
+        DontDestroyOnLoad(transform.gameObject);
         AddLog("Affichage de la console");
     }
 
