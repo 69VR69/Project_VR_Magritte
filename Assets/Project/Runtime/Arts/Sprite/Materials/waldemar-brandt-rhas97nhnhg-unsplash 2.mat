@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tableau_bedroom
+  m_Name: waldemar-brandt-rhas97nhnhg-unsplash 2
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,9 +20,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: eaf2c462117d7d944bfc04a7c40f2c68, type: 3}
-        m_Scale: {x: -12.29, y: 5.3}
-        m_Offset: {x: 47.18, y: -15.06}
+        m_Texture: {fileID: 2800000, guid: ff91051376ad8bc42bdea0601a092af9, type: 3}
+        m_Scale: {x: 1.01, y: 4.71}
+        m_Offset: {x: -0.61, y: 0}
     m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
