@@ -155,7 +155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7845913212085824400, guid: e79181bd674f8ef43ba74f40c91b430d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7845913212085824400, guid: e79181bd674f8ef43ba74f40c91b430d, type: 3}
       propertyPath: m_LocalScale.x
@@ -277,22 +277,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 883157249, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
+    - target: {fileID: 80836267572951176, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 461870306579731882, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 672936390549946128, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: stemObject
       value: 
       objectReference: {fileID: 1544695765748929476}
-    - target: {fileID: 1366592514996101470, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1366592514996101470, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.z
       value: 8.045
@@ -301,22 +293,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7e5bbb6041b7a8b46996944abbe8592c, type: 2}
-    - target: {fileID: 1540311960045336239, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544695764121624272, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1544695764151535970, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e5fb6c7428e26b14591b44821e597f6f, type: 2}
-    - target: {fileID: 1544695764254884712, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1544695764336495496, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Size.z
       value: 25.944103
@@ -356,10 +336,6 @@ PrefabInstance:
     - target: {fileID: 1544695765145591825, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Center.z
       value: 2.5337965
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544695765280719908, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1544695765280719908, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.y
@@ -500,10 +476,6 @@ PrefabInstance:
     - target: {fileID: 2512811321884471533, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_TagString
       value: MatchesBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 2538810124036416077, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893753725430576578, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_TagString
@@ -653,10 +625,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MatchesBox
       objectReference: {fileID: 0}
-    - target: {fileID: 7734948130544023177, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7901962535442129268, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -668,10 +636,6 @@ PrefabInstance:
     - target: {fileID: 8510919005651457530, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_Name
       value: Comb
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650093113745008446, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8650093113745008446, guid: 7f4615d04c49d60499cec7a02fabba06, type: 3}
       propertyPath: m_LocalPosition.z
