@@ -26,27 +26,37 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        var val = _inputManager.TouchPad;
+        // var val = _inputManager.TouchPad;
 
-        //Calculer la vitesse du mouvement du joueur 
-        //float xMov = Input.GetAxisRaw("Horizontal");
-        //float yMov = Input.GetAxisRaw("Vertical");
+
+        // float xMov = val.x;
+        // float yMov = val.y;
+
+        // Vector3 moveHorizontal = transform.right * xMov;
+        // Vector3 moveVertical = transform.forward * yMov;
+
+        // Vector3 velocity = (moveVertical + moveHorizontal).normalized * speed;
+
+        // motor.Move(velocity);
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////:
+        var val = _inputManager.TouchPad;
 
         float xMov = val.x;
         float yMov = val.y;
 
-        Vector3 moveHorizontal = transform.right * xMov;
-        Vector3 moveVertical = transform.forward * yMov;
+        // Calcule la direction du mouvement en fonction de la rotation de la caméra
+        Vector3 cameraForward = _camera.transform.forward;
+        Vector3 cameraRight = _camera.transform.right;
 
-        // Vector3 xMov = val.x * _camera.transform.right;
-        // Vector3 yMov = val.y * _camera.transform.forward;
+        // Calcule le déplacement du joueur en fonction de la direction de la caméra
+        Vector3 moveDirection = (cameraForward * yMov + cameraRight * xMov).normalized;
 
-        // Vector3 moveHorizontal = Vector3.Scale(transform.right,xMov);
-        // Vector3 moveVertical = Vector3.Scale(transform.forward,yMov);
-
-        Vector3 velocity = (moveVertical + moveHorizontal).normalized * speed;
+        Vector3 velocity = moveDirection * speed;
 
         motor.Move(velocity);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         //calcul de la rotation du routeur en un Vector3
         // Quaternion _rot = _camera.transform.rotation;
