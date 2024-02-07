@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
 
     private void Awake()
     {
+        _outline = GetComponentInChildren<Outliner>();
         _collider = GetComponent<BoxCollider>();
 
         if (_collider == null)
@@ -29,11 +30,8 @@ public class Interactable : MonoBehaviour
         Debug.Log($"Interaction with object {name} triggered");
 
         // Activate outline if exists
-        _outline = gameObject.GetComponentInChildren<Outliner>();
-        Debug.Log("Outline : " + _outline);
         if (_outline != null)
         {
-            Debug.Log("Outline activated");
             _outline.ActiveOutline();
         }
 

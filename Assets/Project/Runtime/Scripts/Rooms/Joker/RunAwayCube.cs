@@ -23,7 +23,6 @@ public class RunAwayCube : MonoBehaviour
     {
         if (_player == null)
         {
-
             _player = GameObject.FindGameObjectWithTag("Player");
 
             // Store the initial direction of the cube

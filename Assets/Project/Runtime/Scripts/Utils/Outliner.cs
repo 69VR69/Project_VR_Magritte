@@ -14,12 +14,15 @@ public class Outliner : MonoBehaviour
 
     public void ActiveOutline()
     {
-        Renderer.enabled = true;
+        if (outlineActivated != null || Renderer == null)
+            return;
+
         outlineActivated = StartCoroutine(nameof(Outline));
     }
 
     private IEnumerator Outline()
     {
+        Renderer.enabled = true;
         yield return new WaitForSeconds(0.5f);
         Renderer.enabled = false;
     }
