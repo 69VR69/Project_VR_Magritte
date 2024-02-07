@@ -17,6 +17,9 @@ public class MeltingIce : MonoBehaviour
     {
         waterAudioSource = gameObject.AddComponent<AudioSource>();
         waterAudioSource.clip = waterSound;
+        waterAudioSource.playOnAwake = false;
+        waterAudioSource.Stop();
+        
     }
     private void OnTriggerEnter(Collider other)
     {
