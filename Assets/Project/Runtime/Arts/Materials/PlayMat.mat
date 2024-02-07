@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayMat
-  m_Shader: {fileID: -6465566751694194690, guid: cfba216340bbbf04bbf568c7b19fbc5c, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 8cc442a3c6130f84c9892954463a0a1e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,11 +60,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_6ef9a27b2f24444a8a2ee9864550d19a_Texture_1:
-        m_Texture: {fileID: 2800000, guid: cf1dc91ae212a574d86030fd0f189a3b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 49677a9cfeb370b47859971aa912f6f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_80e98762c2234e9abc5ef80ec5ed16b7_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 6576ba16d95229543b8c46ebcc183da9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68c51a62e1a508f418b213f9828eb9ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:

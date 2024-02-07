@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DebugMat
-  m_Shader: {fileID: -6465566751694194690, guid: 241bc7e9d2b005a44a86c54d46ab113a, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 78ab204f5de71644eacdfc8153b79b5a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -73,11 +73,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_84dca2bebd104f8fadbeccf5fcce1e11_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1b1cc2a781fe067449056cd170eb0d6c, type: 3}
+        m_Texture: {fileID: 2800000, guid: d71057bd60d98e84fa14364eb86877ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_a09a540ab05846c1b912771e3f92118c_Texture_1:
-        m_Texture: {fileID: 2800000, guid: cf1dc91ae212a574d86030fd0f189a3b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68c51a62e1a508f418b213f9828eb9ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
