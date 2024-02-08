@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -419,6 +419,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -428,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 410
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_LocalRotation.w
@@ -448,11 +456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -70.9
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 146
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5310494387736282064, guid: b2637787bbc87734585238c493fa6c06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -494,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3645888394030033575, guid: 3f4dce55df3aa2f4591f21a226e8cf45, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3645888394030033595, guid: 3f4dce55df3aa2f4591f21a226e8cf45, type: 3}
       propertyPath: m_RootOrder
@@ -643,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _EndingScreen: {fileID: 0}
   _TimeToWait: 2
-  _EndScreenDuration: 20
+  _EndScreenDuration: 10
   _InitialPosition: {fileID: 5766786097623927178}
   _TimerStarted: 0
   _ShowEndingScreen: 0

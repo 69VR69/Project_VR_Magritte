@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
@@ -52,6 +53,8 @@ public class PlayerController : MonoBehaviour
         // Calcule le déplacement du joueur en fonction de la direction de la caméra
         Vector3 moveDirection = (cameraForward * yMov + cameraRight * xMov).normalized;
 
+        moveDirection.y = 0;
+
         Vector3 velocity = moveDirection * speed;
 
         motor.Move(velocity);
@@ -62,7 +65,7 @@ public class PlayerController : MonoBehaviour
         // Quaternion _rot = _camera.transform.rotation;
 
         // motor.Rotate(_rot);
-           
+
     }
 
     public void DisableMovement()
@@ -108,7 +111,7 @@ public class PlayerController : MonoBehaviour
 //             Vector3 cameraForward = _camera.transform.forward;
 //             Vector3 cameraRight = _camera.transform.right;
 
-       
+
 //             // Calcul de la direction du mouvement dans l'espace du monde
 //             Vector3 moveDirection = (cameraForward * yMov + cameraRight * xMov).normalized;
 
@@ -116,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
 //             motor.Move(velocity * Time.deltaTime);
 
-           
+
 //             // // Rotation du joueur en fonction de la direction du mouvement
 //             // if (moveDirection != Vector3.zero)
 //             // {

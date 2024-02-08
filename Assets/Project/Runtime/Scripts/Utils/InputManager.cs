@@ -61,6 +61,12 @@ public class InputManager : MonoBehaviour
 
             TouchPad = new float2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
+
+        //Special case of back button to quit
+        if (IsBackButton)
+        {
+            Application.Quit();
+        }
     }
 
     private IEnumerator TriggerValueCoroutine()
