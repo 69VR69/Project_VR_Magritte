@@ -11,11 +11,11 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("volume", volume);
 
-        
     }
 
-
-
+    /// <summary>
+    /// Active ou désactive le mode débogage
+    /// </summary>
     public void SetDebugMode(bool isDebugMode)
     {
         if (isDebugMode)
@@ -28,6 +28,9 @@ public class SettingsMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Affiche la console de débogage
+    /// </summary>
     private void ShowDebugConsole()
     {
         if (debugConsole == null)
@@ -35,7 +38,7 @@ public class SettingsMenu : MonoBehaviour
             debugConsole = GameObject.Find("Console"); 
             if (debugConsole == null)
             {
-                Debug.LogError("Debug Console not found in the scene!");
+                Debug.LogError("Debug Console pas trouvé dans le scène!");
                 return;
             }
         }
@@ -43,17 +46,20 @@ public class SettingsMenu : MonoBehaviour
         if (!debugConsole.activeSelf)
         {
             debugConsole.SetActive(true);
-            Debug.Log("Debug Console shown");
+            Debug.Log("Debug Console montré");
         }
     }
 
+    /// <summary>
+    /// Cache la console de débogage
+    /// </summary>
     private void HideDebugConsole()
     {
         if (debugConsole == null)
         {
             debugConsole = GameObject.Find("Console"); 
             {
-                Debug.LogError("Debug Console not found in the scene!");
+                Debug.LogError("Debug Console pas trouvé dans la scène!");
                 return;
             }
         }
@@ -61,15 +67,8 @@ public class SettingsMenu : MonoBehaviour
         if (debugConsole.activeSelf)
         {
             debugConsole.SetActive(false);
-            Debug.Log("Debug Console hidden");
+            Debug.Log("Debug Console caché");
         }
     }
 
-
-    
-
-    /*public void SetAccessibiiltyMode(bool isAccessibilitygMode)
-    {
-
-    }*/
 }

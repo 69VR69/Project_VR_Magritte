@@ -7,6 +7,9 @@ public class FireOff : MonoBehaviour
     public Material fireMat;
     public GameObject spawnerFire;
 
+    /// <summary>
+    /// Lorsque le feu entre en collision avec la glace, le feu s'éteint progressivement
+    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ice"))
@@ -14,7 +17,9 @@ public class FireOff : MonoBehaviour
             StartCoroutine(DesactiverFeuProgressif());
         }
     }
-
+    /// <summary>
+    /// Désactive progressivement le feu
+    /// </summary>
     IEnumerator DesactiverFeuProgressif()
     {
         float tempsDeFading = 10.0f;
@@ -25,19 +30,15 @@ public class FireOff : MonoBehaviour
 
         float fadePowerFinal = 5.0f;
         float fadeScaleFinal = -1.37f;
-
+        
+        // Faire varier les valeurs du matériau pour éteindre progressivement le feu
         while (tempsTotal < tempsDeFading)
         {
             float proportion = tempsTotal / tempsDeFading;
-
-            // Interpolation linéaire pour ajuster progressivement les valeurs
             float newFadePower = Mathf.Lerp(fadePowerInitial, fadePowerFinal, proportion);
             float newFadeScale = Mathf.Lerp(fadeScaleInitial, fadeScaleFinal, proportion);
-
-            // Appliquer les nouvelles valeurs au matériau
             fireMat.SetFloat("_FadePower", newFadePower);
             fireMat.SetFloat("_FadeScale", newFadeScale);
-
             yield return null;
             tempsTotal += Time.deltaTime;
         }

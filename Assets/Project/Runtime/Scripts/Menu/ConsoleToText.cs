@@ -14,7 +14,7 @@ public class ConsoleToText : MonoBehaviour
 
     private void Start()
     {
-        // Exemple de message d'erreur
+        
         DontDestroyOnLoad(transform.gameObject);
         AddLog("Affichage de la console");
     }
@@ -29,7 +29,9 @@ public class ConsoleToText : MonoBehaviour
         Application.logMessageReceived -= HandleLog;
     }
 
-    //Personalised message in the console
+    /// <summary>
+    /// Add a log to start to the console
+    /// </summary>
     public void AddLog(string message)
     {
         string currentTime = DateTime.Now.ToString("HH:mm:ss");
@@ -39,6 +41,9 @@ public class ConsoleToText : MonoBehaviour
         UpdateDisplayedLogs();
     }
 
+    /// <summary>
+    /// Handle the log message and add it to the console
+    /// </summary>
     void HandleLog(string logString, string stackTrace, LogType type)
     {
         if (type == LogType.Error)
@@ -51,6 +56,9 @@ public class ConsoleToText : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Update the displayed logs
+    /// </summary>
     void UpdateDisplayedLogs()
     {
         displayedLogs.Clear();
@@ -64,6 +72,9 @@ public class ConsoleToText : MonoBehaviour
         UpdateDisplayText();
     }
 
+    /// <summary>
+    /// Update the display text
+    /// </summary>
     void UpdateDisplayText()
     {
         display.text = string.Join("\n", displayedLogs.ToArray());

@@ -16,6 +16,7 @@ public class InputTestor : MonoBehaviour
 
     private void Awake() => _inputManager = InputManager.Instance;
 
+
     private void Update()
     {
         _TriggerCube.SetActive(_inputManager.IsTrigger);
@@ -23,7 +24,6 @@ public class InputTestor : MonoBehaviour
 
         var renderer = _TouchPadCube.GetComponent<Renderer>();
         var val = _inputManager.TouchPad;
-        // Create a color from Vector2
         renderer.material.color = new Color(val.x, val.y, 0);
     }
 }

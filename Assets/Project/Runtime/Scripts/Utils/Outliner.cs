@@ -12,6 +12,9 @@ public class Outliner : MonoBehaviour
         Renderer = GetComponent<Renderer>();
     }
 
+    /// <summary>
+    /// Active the outline of the object
+    /// </summary>
     public void ActiveOutline()
     {
         if (outlineActivated != null || Renderer == null)
@@ -20,6 +23,9 @@ public class Outliner : MonoBehaviour
         outlineActivated = StartCoroutine(nameof(Outline));
     }
 
+    /// <summary>
+    /// Coroutine to outline the object
+    /// </summary>
     private IEnumerator Outline()
     {
         Renderer.enabled = true;

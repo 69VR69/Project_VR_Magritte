@@ -13,12 +13,14 @@ public class DistanceControl : MonoBehaviour
 
     [SerializeField] private PrintMessage message;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Calcule la distance entre la locomotive et le tableau de briques
+    /// </summary>
     void Update()
     {
         var distance = Vector3.Distance(_objectlocomotive.transform.position, _objectbrickboard.transform.position);

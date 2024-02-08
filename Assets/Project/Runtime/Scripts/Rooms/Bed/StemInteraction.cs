@@ -16,14 +16,13 @@ public class StemInteraction : Interactable
 
     private void Start()
     {
-
+        ///Ajout des sources audio pour les sons
         ignitionAudioSource = gameObject.AddComponent<AudioSource>();
         ignitionAudioSource.clip = ignitionSound;
         ignitionAudioSource.playOnAwake = false;
         ignitionAudioSource.Stop();
         continuousAudioSource = gameObject.AddComponent<AudioSource>();
         continuousAudioSource.clip = continuousSound;
-        
         continuousAudioSource.playOnAwake = false;
         continuousAudioSource.Stop();
         grabAudioSource = gameObject.AddComponent<AudioSource>();
@@ -32,44 +31,48 @@ public class StemInteraction : Interactable
         grabAudioSource.Stop();
     }
 
+    /// <summary>
+    /// Lorsque l'allumette entre en collision avec la boîte d'allumettes, le feu est allumé
+    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("MatchesBox") && !hasIgnited)
         {
-            Debug.Log("Collision with matches box");
+            Debug.Log("Collision avec la boîte d'allumettes");
             spawner.GetComponent<FireOn>().IgniteFire();
             hasIgnited = true;
 
             if (ignitionAudioSource != null && ignitionSound != null)
             {
-                Debug.Log("allumage alumette");
                 ignitionAudioSource.Play();
             }
 
             if (continuousAudioSource != null && continuousSound != null)
             {
-                Debug.Log("son allumette");
                 continuousAudioSource.loop = true;
                 continuousAudioSource.Play();
             
             }
         }
     }
-
+    /// <summary>
+    /// Lorsque l'allumette est prise, le son de grab est joué
+    /// </summary>
     public override void Run(GameObject sender, InputManager inputManager)
     {
         base.Run(sender, inputManager);
 
         if (inputManager.IsTrigger)
         {
-            Debug.Log("Son pour grab");
             if (grabAudioSource != null && grabSound != null)
             {
                 grabAudioSource.Play();
             }
         }
     }
-    // appeler cette méthode pour arrêter le son continu lorsque l'allumette est éteinte
+    /// <summary>
+    /// Arrête le son continu de l'allumette
+    /// </summary>
     public void ExtinguishFire()
     {
         if (continuousAudioSource != null)
